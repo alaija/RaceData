@@ -19,10 +19,10 @@
 		C49B34A3C54EB2B058FA614C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246D2E616803E256E80DD860 /* libPods.a */; };
 		DC927A50CB78E133DF5C8818 /* RDRaceInfoInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */; };
 		DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */; };
+		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
 		F58FE7C51C1C66980098D8CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C41C1C66980098D8CE /* main.m */; };
 		F58FE7C81C1C66980098D8CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C71C1C66980098D8CE /* AppDelegate.m */; };
 		F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7CC1C1C66980098D8CE /* Main.storyboard */; };
-		F58FE7D01C1C66980098D8CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7CF1C1C66980098D8CE /* Assets.xcassets */; };
 		F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */; };
 		F58FE7DE1C1C66980098D8CE /* RaceDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */; };
 /* End PBXBuildFile section */
@@ -38,40 +38,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		069EADD2EBBCE5D098234498 /* RDRaceInfoViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoViewOutput.h; path = RaceInfo/View/RDRaceInfoViewOutput.h; sourceTree = "<group>"; };
+		069EADD2EBBCE5D098234498 /* RDRaceInfoViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewOutput.h; sourceTree = "<group>"; };
 		0C76F4F001C43353D3F36073 /* Pods-RaceDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaceDataTests/Pods-RaceDataTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoInteractor.m; path = RaceInfo/Interactor/RDRaceInfoInteractor.m; sourceTree = "<group>"; };
+		0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoInteractor.m; sourceTree = "<group>"; };
 		0D85AD66B79411C6519966D6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1759C751891EFCF6798CDE95 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		238AEC08833B6E26223DE920 /* RDRaceInfoInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoInteractorInput.h; path = RaceInfo/Interactor/RDRaceInfoInteractorInput.h; sourceTree = "<group>"; };
+		238AEC08833B6E26223DE920 /* RDRaceInfoInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractorInput.h; sourceTree = "<group>"; };
 		246D2E616803E256E80DD860 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A103550A7989F7D3B355FF /* RDRaceInfoPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoPresenter.h; path = RaceInfo/Presenter/RDRaceInfoPresenter.h; sourceTree = "<group>"; };
+		25A103550A7989F7D3B355FF /* RDRaceInfoPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoPresenter.h; sourceTree = "<group>"; };
 		3DAAA17819F7350C5E3501B0 /* Pods-RaceDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RaceDataTests/Pods-RaceDataTests.release.xcconfig"; sourceTree = "<group>"; };
-		44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoInteractorTests.m; path = RaceInfo/Interactor/RDRaceInfoInteractorTests.m; sourceTree = "<group>"; };
-		596802974A6FFA37691D3DDC /* RDRaceInfoInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoInteractor.h; path = RaceInfo/Interactor/RDRaceInfoInteractor.h; sourceTree = "<group>"; };
-		6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoAssembly.m; path = RaceInfo/Assembly/RDRaceInfoAssembly.m; sourceTree = "<group>"; };
-		6DA60B0D8DCD10908926702C /* RDRaceInfoViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoViewControllerTests.m; path = RaceInfo/View/RDRaceInfoViewControllerTests.m; sourceTree = "<group>"; };
-		9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoPresenter.m; path = RaceInfo/Presenter/RDRaceInfoPresenter.m; sourceTree = "<group>"; };
-		9D57BB44BF416CD20DC20086 /* RDRaceInfoRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoRouterInput.h; path = RaceInfo/Router/RDRaceInfoRouterInput.h; sourceTree = "<group>"; };
-		9F8ABA8367EF27892C19A424 /* RDRaceInfoPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoPresenterTests.m; path = RaceInfo/Presenter/RDRaceInfoPresenterTests.m; sourceTree = "<group>"; };
-		AEB02E3640F0B4368E7E7994 /* RDRaceInfoAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoAssemblyTests.m; path = RaceInfo/Assembly/RDRaceInfoAssemblyTests.m; sourceTree = "<group>"; };
+		44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoInteractorTests.m; sourceTree = "<group>"; };
+		596802974A6FFA37691D3DDC /* RDRaceInfoInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractor.h; sourceTree = "<group>"; };
+		6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoAssembly.m; sourceTree = "<group>"; };
+		6DA60B0D8DCD10908926702C /* RDRaceInfoViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoViewControllerTests.m; sourceTree = "<group>"; };
+		9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoPresenter.m; sourceTree = "<group>"; };
+		9D57BB44BF416CD20DC20086 /* RDRaceInfoRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoRouterInput.h; sourceTree = "<group>"; };
+		9F8ABA8367EF27892C19A424 /* RDRaceInfoPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoPresenterTests.m; sourceTree = "<group>"; };
+		AEB02E3640F0B4368E7E7994 /* RDRaceInfoAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoAssemblyTests.m; sourceTree = "<group>"; };
 		B799FD0017030DE8E037FC72 /* libPods-RaceDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RaceDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA428A44ABDC629E7635D1A9 /* RDRaceInfoInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoInteractorOutput.h; path = RaceInfo/Interactor/RDRaceInfoInteractorOutput.h; sourceTree = "<group>"; };
-		BAC27CF96786147B3BB56D72 /* RDRaceInfoModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoModuleInput.h; path = RaceInfo/Presenter/RDRaceInfoModuleInput.h; sourceTree = "<group>"; };
-		C15170DFD4AA4D97334158F9 /* RDRaceInfoViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoViewInput.h; path = RaceInfo/View/RDRaceInfoViewInput.h; sourceTree = "<group>"; };
-		D0993F3D3549355F973C89BF /* RDRaceInfoRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoRouter.h; path = RaceInfo/Router/RDRaceInfoRouter.h; sourceTree = "<group>"; };
-		D78CE58E5302827DB1ADEA8A /* RDRaceInfoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoViewController.h; path = RaceInfo/View/RDRaceInfoViewController.h; sourceTree = "<group>"; };
-		D7AAB5226148FF41EB83F52D /* RDRaceInfoRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoRouter.m; path = RaceInfo/Router/RDRaceInfoRouter.m; sourceTree = "<group>"; };
-		DC0D6693DE731CDF9F02E885 /* RDRaceInfoAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoAssembly_Testable.h; path = RaceInfo/Assembly/RDRaceInfoAssembly_Testable.h; sourceTree = "<group>"; };
-		DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoViewController.m; path = RaceInfo/View/RDRaceInfoViewController.m; sourceTree = "<group>"; };
-		DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDRaceInfoRouterTests.m; path = RaceInfo/Router/RDRaceInfoRouterTests.m; sourceTree = "<group>"; };
-		F39E383884F344FE10A88AD4 /* RDRaceInfoAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDRaceInfoAssembly.h; path = RaceInfo/Assembly/RDRaceInfoAssembly.h; sourceTree = "<group>"; };
+		BA428A44ABDC629E7635D1A9 /* RDRaceInfoInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractorOutput.h; sourceTree = "<group>"; };
+		BAC27CF96786147B3BB56D72 /* RDRaceInfoModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoModuleInput.h; sourceTree = "<group>"; };
+		C15170DFD4AA4D97334158F9 /* RDRaceInfoViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewInput.h; sourceTree = "<group>"; };
+		D0993F3D3549355F973C89BF /* RDRaceInfoRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoRouter.h; sourceTree = "<group>"; };
+		D78CE58E5302827DB1ADEA8A /* RDRaceInfoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewController.h; sourceTree = "<group>"; };
+		D7AAB5226148FF41EB83F52D /* RDRaceInfoRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouter.m; sourceTree = "<group>"; };
+		DC0D6693DE731CDF9F02E885 /* RDRaceInfoAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoAssembly_Testable.h; sourceTree = "<group>"; };
+		DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoViewController.m; sourceTree = "<group>"; };
+		DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouterTests.m; sourceTree = "<group>"; };
+		F39E383884F344FE10A88AD4 /* RDRaceInfoAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoAssembly.h; sourceTree = "<group>"; };
+		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F58FE7C01C1C66980098D8CE /* RaceData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58FE7C41C1C66980098D8CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F58FE7C61C1C66980098D8CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F58FE7C71C1C66980098D8CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F58FE7CD1C1C66980098D8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F58FE7CF1C1C66980098D8CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58FE7D21C1C66980098D8CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F58FE7D41C1C66980098D8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F58FE7D91C1C66980098D8CE /* RaceDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaceDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +104,7 @@
 			children = (
 				9F8ABA8367EF27892C19A424 /* RDRaceInfoPresenterTests.m */,
 			);
-			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		251637245DF3A69027784B1B /* View */ = {
@@ -112,7 +112,7 @@
 			children = (
 				6DA60B0D8DCD10908926702C /* RDRaceInfoViewControllerTests.m */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2595C74C50961C35AA97D814 /* Interactor */ = {
@@ -120,17 +120,17 @@
 			children = (
 				44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */,
 			);
-			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		3EFFA7DFCCCA868ECC3F3469 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				9D57BB44BF416CD20DC20086 /* RDRaceInfoRouterInput.h */,
 				D0993F3D3549355F973C89BF /* RDRaceInfoRouter.h */,
 				D7AAB5226148FF41EB83F52D /* RDRaceInfoRouter.m */,
+				9D57BB44BF416CD20DC20086 /* RDRaceInfoRouterInput.h */,
 			);
-			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		40109186164569D1B87D48AF /* Frameworks */ = {
@@ -156,12 +156,12 @@
 		44B96D12600D3D41AC4477A1 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				238AEC08833B6E26223DE920 /* RDRaceInfoInteractorInput.h */,
-				BA428A44ABDC629E7635D1A9 /* RDRaceInfoInteractorOutput.h */,
 				596802974A6FFA37691D3DDC /* RDRaceInfoInteractor.h */,
 				0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */,
+				238AEC08833B6E26223DE920 /* RDRaceInfoInteractorInput.h */,
+				BA428A44ABDC629E7635D1A9 /* RDRaceInfoInteractorOutput.h */,
 			);
-			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		4899DD69B4B97D568B8980AF /* Assembly */ = {
@@ -170,19 +170,19 @@
 				AEB02E3640F0B4368E7E7994 /* RDRaceInfoAssemblyTests.m */,
 				DC0D6693DE731CDF9F02E885 /* RDRaceInfoAssembly_Testable.h */,
 			);
-			name = Assembly;
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		4B451D47ACB1A9DC937E28B0 /* RaceInfo */ = {
 			isa = PBXGroup;
 			children = (
 				E855F23152428E6863FC0AD1 /* Assembly */,
-				992060EBC9228BB74D5B3221 /* View */,
-				743215F599B7F17174E281A7 /* Presenter */,
 				44B96D12600D3D41AC4477A1 /* Interactor */,
+				743215F599B7F17174E281A7 /* Presenter */,
 				3EFFA7DFCCCA868ECC3F3469 /* Router */,
+				992060EBC9228BB74D5B3221 /* View */,
 			);
-			name = RaceInfo;
+			path = RaceInfo;
 			sourceTree = "<group>";
 		};
 		743215F599B7F17174E281A7 /* Presenter */ = {
@@ -192,18 +192,18 @@
 				25A103550A7989F7D3B355FF /* RDRaceInfoPresenter.h */,
 				9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */,
 			);
-			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		992060EBC9228BB74D5B3221 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C15170DFD4AA4D97334158F9 /* RDRaceInfoViewInput.h */,
-				069EADD2EBBCE5D098234498 /* RDRaceInfoViewOutput.h */,
 				D78CE58E5302827DB1ADEA8A /* RDRaceInfoViewController.h */,
 				DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */,
+				C15170DFD4AA4D97334158F9 /* RDRaceInfoViewInput.h */,
+				069EADD2EBBCE5D098234498 /* RDRaceInfoViewOutput.h */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		A2C05C85488AA07E28C98F2C /* Router */ = {
@@ -211,19 +211,19 @@
 			children = (
 				DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */,
 			);
-			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		C5C978B36FD88DDCA65CFBA0 /* RaceInfo */ = {
 			isa = PBXGroup;
 			children = (
 				4899DD69B4B97D568B8980AF /* Assembly */,
-				251637245DF3A69027784B1B /* View */,
-				05DD144D027A647B1AE175A4 /* Presenter */,
 				2595C74C50961C35AA97D814 /* Interactor */,
+				05DD144D027A647B1AE175A4 /* Presenter */,
 				A2C05C85488AA07E28C98F2C /* Router */,
+				251637245DF3A69027784B1B /* View */,
 			);
-			name = RaceInfo;
+			path = RaceInfo;
 			sourceTree = "<group>";
 		};
 		E855F23152428E6863FC0AD1 /* Assembly */ = {
@@ -232,17 +232,61 @@
 				F39E383884F344FE10A88AD4 /* RDRaceInfoAssembly.h */,
 				6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */,
 			);
-			name = Assembly;
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		F54520C51C1C806500F795F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F54520CA1C1C832500F795F1 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F54520C61C1C809500F795F1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F54520C71C1C80CB00F795F1 /* Application Layer */,
+				F54520C81C1C80DF00F795F1 /* Presentation Layer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F54520C71C1C80CB00F795F1 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F58FE7C61C1C66980098D8CE /* AppDelegate.h */,
+				F58FE7C71C1C66980098D8CE /* AppDelegate.m */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		F54520C81C1C80DF00F795F1 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F54520C91C1C813200F795F1 /* UserStories */,
+				F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */,
+				F58FE7CC1C1C66980098D8CE /* Main.storyboard */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		F54520C91C1C813200F795F1 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				4B451D47ACB1A9DC937E28B0 /* RaceInfo */,
+			);
+			path = UserStories;
 			sourceTree = "<group>";
 		};
 		F58FE7B71C1C66980098D8CE = {
 			isa = PBXGroup;
 			children = (
+				40109186164569D1B87D48AF /* Frameworks */,
+				437C8278B06F3D469FDA654C /* Pods */,
+				F58FE7C11C1C66980098D8CE /* Products */,
 				F58FE7C21C1C66980098D8CE /* RaceData */,
 				F58FE7DC1C1C66980098D8CE /* RaceDataTests */,
-				F58FE7C11C1C66980098D8CE /* Products */,
-				437C8278B06F3D469FDA654C /* Pods */,
-				40109186164569D1B87D48AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -258,14 +302,9 @@
 		F58FE7C21C1C66980098D8CE /* RaceData */ = {
 			isa = PBXGroup;
 			children = (
-				F58FE7C61C1C66980098D8CE /* AppDelegate.h */,
-				F58FE7C71C1C66980098D8CE /* AppDelegate.m */,
-				F58FE7CC1C1C66980098D8CE /* Main.storyboard */,
-				F58FE7CF1C1C66980098D8CE /* Assets.xcassets */,
-				F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */,
-				F58FE7D41C1C66980098D8CE /* Info.plist */,
+				F54520C61C1C809500F795F1 /* Classes */,
+				F54520C51C1C806500F795F1 /* Resources */,
 				F58FE7C31C1C66980098D8CE /* Supporting Files */,
-				4B451D47ACB1A9DC937E28B0 /* RaceInfo */,
 			);
 			path = RaceData;
 			sourceTree = "<group>";
@@ -273,17 +312,18 @@
 		F58FE7C31C1C66980098D8CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F58FE7D41C1C66980098D8CE /* Info.plist */,
 				F58FE7C41C1C66980098D8CE /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F58FE7DC1C1C66980098D8CE /* RaceDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */,
-				F58FE7DF1C1C66980098D8CE /* Info.plist */,
 				C5C978B36FD88DDCA65CFBA0 /* RaceInfo */,
+				F58FE7DF1C1C66980098D8CE /* Info.plist */,
+				F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */,
 			);
 			path = RaceDataTests;
 			sourceTree = "<group>";
@@ -374,8 +414,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */,
 				F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */,
-				F58FE7D01C1C66980098D8CE /* Assets.xcassets in Resources */,
 				F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +567,7 @@
 				F58FE7CD1C1C66980098D8CE /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */ = {
@@ -535,6 +576,7 @@
 				F58FE7D21C1C66980098D8CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -625,7 +667,7 @@
 			baseConfigurationReference = 1759C751891EFCF6798CDE95 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RaceData/Info.plist;
+				INFOPLIST_FILE = "RaceData/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alaija.RaceData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,7 +679,7 @@
 			baseConfigurationReference = 0D85AD66B79411C6519966D6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RaceData/Info.plist;
+				INFOPLIST_FILE = "RaceData/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alaija.RaceData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
