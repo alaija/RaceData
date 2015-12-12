@@ -1,0 +1,36 @@
+PODS:
+  - OCMock (3.2)
+  - PureLayout (3.0.1)
+  - RamblerTyphoonUtils/AssemblyCollector (1.0.0)
+  - RamblerTyphoonUtils/AssemblyTesting (1.0.0)
+  - Realm (0.96.3):
+    - Realm/Headers (= 0.96.3)
+  - Realm/Headers (0.96.3)
+  - Typhoon (3.4.4):
+    - Typhoon/no-arc (= 3.4.4)
+  - Typhoon/no-arc (3.4.4)
+  - ViperMcFlurry (1.1.5):
+    - ViperMcFlurry/Core (= 1.1.5)
+    - ViperMcFlurry/IntermoduleDataTransfer (= 1.1.5)
+  - ViperMcFlurry/Core (1.1.5)
+  - ViperMcFlurry/IntermoduleDataTransfer (1.1.5):
+    - ViperMcFlurry/Core
+
+DEPENDENCIES:
+  - OCMock
+  - PureLayout
+  - RamblerTyphoonUtils/AssemblyCollector
+  - RamblerTyphoonUtils/AssemblyTesting
+  - Realm
+  - Typhoon
+  - ViperMcFlurry
+
+SPEC CHECKSUMS:
+  OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  RamblerTyphoonUtils: bafad8fd42ca7df9239d2ccb68021ba21d81d741
+  Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
+  Typhoon: e937c62b9048f73a93c1aa94f00627d97cecd588
+  ViperMcFlurry: 74116ba3fcb0add7b9432e81cd3accc784694305
+
+COCOAPODS: 0.39.0

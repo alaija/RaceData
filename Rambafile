@@ -1,0 +1,38 @@
+### Headers settings
+company: RaceData
+
+### Xcode project settings
+project_name: RaceData
+prefix: RD
+xcodeproj_path: RaceData.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: RaceData
+
+# The file path for new modules
+project_file_path: RaceData/
+
+# The Xcode group path to new modules
+project_group_path: RaceData/
+
+### Tests generation settings section
+# The tests target name
+test_target: RaceDataTests
+
+# The file path for new tests
+test_file_path: RaceDataTests/
+
+# The Xcode group path to new tests
+test_group_path: RaceDataTests/
+
+### Dependencies settings section
+podfile_path: Podfile
+cartfile_path: 
+
+### Templates
+templates:
+#- {name: local_template_name, local: 'absolute/file/path'}
+#- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
+#- {name: catalog_template_name}
+- {name: 'rviper_controller'}
