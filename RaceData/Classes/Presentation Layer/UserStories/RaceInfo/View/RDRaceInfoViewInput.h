@@ -17,4 +17,9 @@
  */
 - (void)setupInitialState;
 
+- (void)setupReadyToStartState;
+- (void)setupRaceState;
+
+- (void)updateSpeed:(CGFloat)speed;
+- (void)updateMotionStartTime;
 @end

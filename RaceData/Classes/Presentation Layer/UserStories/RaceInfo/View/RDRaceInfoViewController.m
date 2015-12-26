@@ -9,22 +9,124 @@
 #import "RDRaceInfoViewController.h"
 
 #import "RDRaceInfoViewOutput.h"
+#import "PureLayout.h"
+#import "UIView+BlocksKit.h"
+
+@interface RDRaceInfoViewController ()
+
+@property (nonatomic, strong) NSDateFormatter *timeFormater;
+
+@property (nonatomic, strong) UILabel *speedLabel;
+@property (nonatomic, strong) UILabel *speedTimeLabel;
+@property (nonatomic, strong) UILabel *motionTimeLabel;
+
+@property (nonatomic) BOOL started;
+@property (nonatomic) BOOL shouldUpdateTime;
+
+@end
 
 @implementation RDRaceInfoViewController
 
+#pragma mark - Internal
+
+- (void)updateSpeedStartTime
+{
+    _speedTimeLabel.text = [NSString stringWithFormat:@"Speed start: %@", [_timeFormater stringFromDate:[NSDate date]]];
+    _shouldUpdateTime = NO;
+}
+
+- (void)setupSpeedLabel
+{
+    _speedLabel = [UILabel new];
+    _speedLabel.font = [UIFont systemFontOfSize:30.];
+    _speedLabel.text = @"waiting...";
+    
+    [self.view addSubview:_speedLabel];
+    
+    [NSLayoutConstraint autoCreateAndInstallConstraints:^{
+        [self.speedLabel autoCenterInSuperview];
+    }];
+}
+
+- (void)setupTimeLabels
+{
+    _speedTimeLabel = [UILabel new];
+    [self.view addSubview:_speedTimeLabel];
+    
+    _motionTimeLabel = [UILabel new];
+    [self.view addSubview:_motionTimeLabel];
+    
+    [NSLayoutConstraint autoCreateAndInstallConstraints:^{
+        [self.speedTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.speedTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:40.];
+        [self.motionTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.motionTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20.];
+    }];
+}
+
 #pragma mark - Методы жизненного цикла
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
+    _timeFormater = [[NSDateFormatter alloc] init];
+    [_timeFormater setDateFormat:@"HH:mm:ss.S"];
 
 	[self.output didTriggerViewReadyEvent];
 }
 
 #pragma mark - Методы RDRaceInfoViewInput
 
-- (void)setupInitialState {
+- (void)setupInitialState
+{
 	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
+    [self setupSpeedLabel];
+    [self setupTimeLabels];
+    self.shouldUpdateTime = NO;
+    self.view.backgroundColor = [UIColor redColor];
+}
+
+- (void)setupReadyToStartState
+{
+    self.speedTimeLabel.text = @"";
+    self.motionTimeLabel.text = @"";
+    
+    self.speedLabel.text = @"Tap to start";
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    [self.view bk_whenTapped:^{
+        if (_started)
+        {
+            _started = NO;
+            [self.output didTriggerRaceStopEvent];
+        } else {
+            _started = YES;
+            [self.output didTriggerRaceStartEvent];
+        }
+    }];
+}
+
+- (void)setupRaceState
+{
+    self.shouldUpdateTime = YES;
+    self.speedLabel.text = @"0.0 km/h";
     self.view.backgroundColor = [UIColor greenColor];
+}
+
+- (void)updateSpeed:(CGFloat)speed
+{
+    if (_shouldUpdateTime) {
+        [self updateSpeedStartTime];
+    }
+    
+    if (_started) {
+        self.speedLabel.text = [NSString stringWithFormat:@"%.1f km/h", speed];
+    }
+}
+
+- (void)updateMotionStartTime
+{
+    _motionTimeLabel.text = [NSString stringWithFormat:@"Motion start: %@", [_timeFormater stringFromDate:[NSDate date]]];
 }
 
 @end

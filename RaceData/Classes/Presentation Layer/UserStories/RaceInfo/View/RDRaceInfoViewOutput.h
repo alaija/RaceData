@@ -17,4 +17,7 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+- (void)didTriggerRaceStartEvent;
+- (void)didTriggerRaceStopEvent;
+
 @end

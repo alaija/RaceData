@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@import UIKit;
+
 @protocol RDRaceInfoInteractorOutput <NSObject>
+
+- (void)didSetUpManagers;
+- (void)motionStarted;
+- (void)speedChanged:(CGFloat)newSpeed;
 
 @end

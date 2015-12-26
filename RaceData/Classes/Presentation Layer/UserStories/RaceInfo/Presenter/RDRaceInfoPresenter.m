@@ -24,8 +24,36 @@
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
+    [self.interactor setupManagers];
+}
+
+- (void)didTriggerRaceStartEvent
+{
+    [self.interactor startUpdates];
+    [self.view setupRaceState];
+}
+
+- (void)didTriggerRaceStopEvent
+{
+    [self.interactor stopUpdates];
+    [self.view setupReadyToStartState];
 }
 
 #pragma mark - Методы RDRaceInfoInteractorOutput
+
+- (void)didSetUpManagers
+{
+    [self.view setupReadyToStartState];
+}
+
+- (void)motionStarted
+{
+    [self.view updateMotionStartTime];
+}
+
+- (void)speedChanged:(CGFloat)newSpeed
+{
+    [self.view updateSpeed:newSpeed];
+}
 
 @end

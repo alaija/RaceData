@@ -32,6 +32,10 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterRaceInfoModule]];
+                              [definition injectProperty:@selector(locationManager)
+                                                    with:[self locationManager]];
+                              [definition injectProperty:@selector(motionManager)
+                                                    with:[self motionManager]];
                           }];
 }
 
@@ -52,6 +56,24 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewRaceInfoModule]];
+                          }];
+}
+
+- (CLLocationManager *)locationManager
+{
+    return [TyphoonDefinition withClass:[CLLocationManager class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              [definition injectProperty:@selector(delegate)
+                                                    with:[self interactorRaceInfoModule]];
+                              definition.scope = TyphoonScopeSingleton;
+                          }];
+}
+
+- (CMMotionManager *)motionManager
+{
+    return [TyphoonDefinition withClass:[CMMotionManager class]
+                          configuration:^(TyphoonDefinition *definition) {
+                              definition.scope = TyphoonScopeSingleton;
                           }];
 }
 

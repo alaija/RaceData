@@ -10,4 +10,8 @@
 
 @protocol RDRaceInfoInteractorInput <NSObject>
 
+- (void)setupManagers;
+- (void)startUpdates;
+- (void)stopUpdates;
+
 @end

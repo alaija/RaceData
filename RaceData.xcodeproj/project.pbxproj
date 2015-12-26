@@ -20,6 +20,7 @@
 		DC927A50CB78E133DF5C8818 /* RDRaceInfoInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */; };
 		DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */; };
 		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
+		F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */; };
 		F58FE7C51C1C66980098D8CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C41C1C66980098D8CE /* main.m */; };
 		F58FE7C81C1C66980098D8CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C71C1C66980098D8CE /* AppDelegate.m */; };
 		F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7CC1C1C66980098D8CE /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouterTests.m; sourceTree = "<group>"; };
 		F39E383884F344FE10A88AD4 /* RDRaceInfoAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoAssembly.h; sourceTree = "<group>"; };
 		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F58FE7C01C1C66980098D8CE /* RaceData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58FE7C41C1C66980098D8CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F58FE7C61C1C66980098D8CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */,
 				C49B34A3C54EB2B058FA614C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +139,7 @@
 		40109186164569D1B87D48AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */,
 				246D2E616803E256E80DD860 /* libPods.a */,
 				B799FD0017030DE8E037FC72 /* libPods-RaceDataTests.a */,
 			);
@@ -248,6 +252,7 @@
 			children = (
 				F54520C71C1C80CB00F795F1 /* Application Layer */,
 				F54520C81C1C80DF00F795F1 /* Presentation Layer */,
+				F54520CE1C1FD7B000F795F1 /* Buisnes Logic */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,6 +282,13 @@
 				4B451D47ACB1A9DC937E28B0 /* RaceInfo */,
 			);
 			path = UserStories;
+			sourceTree = "<group>";
+		};
+		F54520CE1C1FD7B000F795F1 /* Buisnes Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Buisnes Logic";
 			sourceTree = "<group>";
 		};
 		F58FE7B71C1C66980098D8CE = {
