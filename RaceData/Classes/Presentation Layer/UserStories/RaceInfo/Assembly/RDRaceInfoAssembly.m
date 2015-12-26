@@ -65,16 +65,12 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(delegate)
                                                     with:[self interactorRaceInfoModule]];
-                              definition.scope = TyphoonScopeSingleton;
                           }];
 }
 
 - (CMMotionManager *)motionManager
 {
-    return [TyphoonDefinition withClass:[CMMotionManager class]
-                          configuration:^(TyphoonDefinition *definition) {
-                              definition.scope = TyphoonScopeSingleton;
-                          }];
+    return [TyphoonDefinition withClass:[CMMotionManager class]];
 }
 
 @end

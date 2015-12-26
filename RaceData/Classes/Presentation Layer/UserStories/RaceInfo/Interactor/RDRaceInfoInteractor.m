@@ -9,6 +9,7 @@
 #import "RDRaceInfoInteractor.h"
 
 #import "RDRaceInfoInteractorOutput.h"
+#import "math.h"
 
 static CGFloat const RDRaceInfoInteractorKMPH = 3.6;
 
@@ -16,42 +17,22 @@ static CGFloat const RDRaceInfoInteractorKMPH = 3.6;
 @property (atomic, strong) NSTimer *locationPingTimer;
 @property (nonatomic, strong) NSDate *startRecordTime;
 @property (nonatomic) BOOL readyToStart;
-@property (nonatomic) CGFloat xAvg;
-@property (nonatomic) CGFloat yAvg;
-@property (nonatomic) CGFloat zAvg;
-@property (nonatomic) NSUInteger motionsCount;
 @end
 
 @implementation RDRaceInfoInteractor
 
 #pragma mark - Internal methods
 
-- (CGFloat)updateAvg:(CGFloat)vAvg
-           withValue:(CGFloat)v
+- (void)handleMotionData:(CMAcceleration)acceleration
 {
-    if (vAvg == -9) {
-        return v;
-    }
-    
-    if (fabs(fabs(vAvg) - fabs(v)) > 0.25)
-    {
+    CGFloat acc = sqrt((pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2)));
+
+    if (fabs(1. - acc) > 0.1) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.output motionStarted];
         });
         [_motionManager stopAccelerometerUpdates];
-        return vAvg;
-    } else {
-        return (vAvg * _motionsCount + v)/(_motionsCount + 1);
     }
-}
-
-- (void)handleMotionData:(CMAcceleration)acceleration
-{
-    _motionsCount++;
-    _xAvg = [self updateAvg:_xAvg withValue:acceleration.x];
-    _yAvg = [self updateAvg:_yAvg withValue:acceleration.y];
-    _zAvg = [self updateAvg:_zAvg withValue:acceleration.z];
-    NSLog(@"%.2f, %.2f %.2f", _xAvg, _yAvg, _zAvg);
 }
 
 - (void)handleNewLocation:(CLLocation *)location
@@ -101,11 +82,6 @@ static CGFloat const RDRaceInfoInteractorKMPH = 3.6;
 {
     [self.locationManager stopUpdatingLocation];
     [self.motionManager stopAccelerometerUpdates];
-    
-    _motionsCount = 0;
-    _xAvg = -9;
-    _yAvg = -9;
-    _zAvg = -9;
 }
 
 #pragma mark - Core Location
