@@ -6,17 +6,18 @@
 //  Copyright 2015 RaceData. All rights reserved.
 //
 
-#import <CoreLocation/CoreLocation.h>
 #import <CoreMotion/CoreMotion.h>
 
 #import "RDRaceInfoInteractorInput.h"
+#import "LocationService.h"
+#import "MotionService.h"
 
 @protocol RDRaceInfoInteractorOutput;
 
 @interface RDRaceInfoInteractor : NSObject <RDRaceInfoInteractorInput>
 
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) CMMotionManager *motionManager;
+@property (nonatomic, strong) NSObject<LocationService> *locationService;
+@property (nonatomic, strong) NSObject<MotionService> *motionService;
 
 @property (nonatomic, weak) id<RDRaceInfoInteractorOutput> output;
 

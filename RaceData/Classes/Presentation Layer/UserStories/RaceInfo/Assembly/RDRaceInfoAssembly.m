@@ -12,6 +12,7 @@
 #import "RDRaceInfoInteractor.h"
 #import "RDRaceInfoPresenter.h"
 #import "RDRaceInfoRouter.h"
+#import "ServiceComponents.h"
 
 #import <ViperMcFlurry/ViperMcFlurry.h>
 
@@ -32,10 +33,10 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(output)
                                                     with:[self presenterRaceInfoModule]];
-                              [definition injectProperty:@selector(locationManager)
-                                                    with:[self locationManager]];
-                              [definition injectProperty:@selector(motionManager)
-                                                    with:[self motionManager]];
+                              [definition injectProperty:@selector(locationService)
+                                                    with:[self.serviceComponents locationService]];
+                              [definition injectProperty:@selector(motionService)
+                                                    with:[self.serviceComponents motionService]];
                           }];
 }
 
@@ -56,15 +57,6 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(transitionHandler)
                                                     with:[self viewRaceInfoModule]];
-                          }];
-}
-
-- (CLLocationManager *)locationManager
-{
-    return [TyphoonDefinition withClass:[CLLocationManager class]
-                          configuration:^(TyphoonDefinition *definition) {
-                              [definition injectProperty:@selector(delegate)
-                                                    with:[self interactorRaceInfoModule]];
                           }];
 }
 

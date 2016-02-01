@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Race Info View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RDRaceInfoViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RDRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFK-Uj-fOv">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-8M-Zxd">
+                                <rect key="frame" x="534" y="40" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjd-zR-TXR">
+                                <rect key="frame" x="20" y="40" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-1j-vZf">
+                                <rect key="frame" x="534" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-OA-PC6">
+                                <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xyG-OA-PC6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="95t-4D-emA"/>
+                            <constraint firstItem="wjd-zR-TXR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="A5l-5E-w8g"/>
+                            <constraint firstAttribute="trailing" secondItem="lo6-8M-Zxd" secondAttribute="trailing" constant="20" id="GOd-an-6bz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pFK-Uj-fOv" secondAttribute="bottom" id="I4B-n6-Orc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awe-1j-vZf" secondAttribute="bottom" constant="20" id="JLj-bq-zW1"/>
+                            <constraint firstAttribute="trailing" secondItem="Awe-1j-vZf" secondAttribute="trailing" constant="20" id="NbA-jV-1m8"/>
+                            <constraint firstAttribute="trailing" secondItem="pFK-Uj-fOv" secondAttribute="trailing" id="SeT-oP-LU1"/>
+                            <constraint firstItem="lo6-8M-Zxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gqi-eJ-iZr"/>
+                            <constraint firstItem="pFK-Uj-fOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hO5-lF-BfA"/>
+                            <constraint firstItem="pFK-Uj-fOv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mdl-04-4n6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyG-OA-PC6" secondAttribute="bottom" constant="20" id="rCF-fY-pLP"/>
+                            <constraint firstItem="wjd-zR-TXR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ssN-F7-aPx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentContainerView" destination="pFK-Uj-fOv" id="lqR-Gx-2yJ"/>
+                        <outlet property="leftActionButton" destination="wjd-zR-TXR" id="8Zb-D9-43w"/>
+                        <outlet property="leftNavigationButton" destination="xyG-OA-PC6" id="FfI-Y8-YgP"/>
+                        <outlet property="rightActionButton" destination="lo6-8M-Zxd" id="CLC-Yg-t2v"/>
+                        <outlet property="rightNavigationButton" destination="Awe-1j-vZf" id="zi9-1a-xwU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="429" y="389"/>
         </scene>
     </scenes>
 </document>

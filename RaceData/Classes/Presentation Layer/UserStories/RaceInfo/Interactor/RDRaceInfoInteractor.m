@@ -11,11 +11,10 @@
 #import "RDRaceInfoInteractorOutput.h"
 #import "math.h"
 
-static CGFloat const RDRaceInfoInteractorKMPH = 3.6;
+static void *RaceInfoLocationServiceContext = &RaceInfoLocationServiceContext;
+static void *RaceInfoMotionServiceContext = &RaceInfoMotionServiceContext;
 
 @interface RDRaceInfoInteractor()
-@property (atomic, strong) NSTimer *locationPingTimer;
-@property (nonatomic, strong) NSDate *startRecordTime;
 @property (nonatomic) BOOL readyToStart;
 @end
 
@@ -23,134 +22,73 @@ static CGFloat const RDRaceInfoInteractorKMPH = 3.6;
 
 #pragma mark - Internal methods
 
-- (void)handleMotionData:(CMAcceleration)acceleration
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
 {
-    CGFloat acc = sqrt((pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2)));
-
-    if (fabs(1. - acc) > 0.1) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.output motionStarted];
-        });
-        [_motionManager stopAccelerometerUpdates];
+    if (context == RaceInfoLocationServiceContext) {
+        
+        if ([keyPath isEqualToString:@"currentSpeed"]) {
+            CGFloat newSpeed = [change[@"new"] floatValue];
+            
+            if (newSpeed >= 0 ) {
+                [self.output speedChanged:newSpeed];
+            }
+        } else if ([keyPath isEqualToString:@"signalQuality"]){
+            GPSSignalQuality quality = [change[@"new"] integerValue];
+            
+            if (quality == GPSSignalQualityHigh) {
+                [self.output didSetUpManagers];
+                
+                [self.locationService removeObserver:self
+                                          forKeyPath:@"signalQuality"
+                                             context:RaceInfoLocationServiceContext];
+                
+            }
+        }
+    } else if (context == RaceInfoMotionServiceContext) {
+        if ([keyPath isEqualToString:@"currentAcceleration"]) {
+            CGFloat newAcc = [change[@"new"] floatValue];
+            if (fabs(1. - newAcc) > 0.1) {
+                [self.output motionStarted];
+            }
+        }
     }
-}
-
-- (void)handleNewLocation:(CLLocation *)location
-{
-    if (location.speed > 0) {
-        CGFloat currentSpeed = location.speed * RDRaceInfoInteractorKMPH;
-        [self.output speedChanged:currentSpeed];
-    }
-}
-
-- (void)setReadyToStart
-{
-    [self stopUpdates];
-    [self.output didSetUpManagers];
-    
-    _readyToStart = YES;
 }
 
 #pragma mark - Методы RDRaceInfoInteractorInput
 
 - (void)setupManagers
 {
-    self.motionManager.deviceMotionUpdateInterval = 0.01;
+    [self.locationService addObserver:self
+                           forKeyPath:@"signalQuality"
+                              options:NSKeyValueObservingOptionNew
+                              context:RaceInfoLocationServiceContext];
     
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    [self.locationService addObserver:self
+                           forKeyPath:@"currentSpeed"
+                              options:NSKeyValueObservingOptionNew
+                              context:RaceInfoLocationServiceContext];
     
-    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationService requestAccess];
+    
+    [self.motionService addObserver:self
+                         forKeyPath:@"currentAcceleration"
+                            options:NSKeyValueObservingOptionNew
+                            context:RaceInfoMotionServiceContext];
 }
-
-
 
 - (void)startUpdates
 {
-    [self.locationManager startUpdatingLocation];
-    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue new]
-                                             withHandler:^(CMAccelerometerData * _Nullable accelerometerData,
-                                                           NSError * _Nullable error) {
-                                                if (!error)
-                                                {
-                                                    [self handleMotionData:accelerometerData.acceleration];
-                                                }
-                                            }];
+    [self.motionService startUpdates];
+    [self.locationService startUpdates];
 }
 
 - (void)stopUpdates
 {
-    [self.locationManager stopUpdatingLocation];
-    [self.motionManager stopAccelerometerUpdates];
-}
-
-#pragma mark - Core Location
-
--(void)locationManager:(CLLocationManager *)manager
-didChangeAuthorizationStatus:(CLAuthorizationStatus)status
-{
-    switch (status) {
-        case kCLAuthorizationStatusNotDetermined:
-        case kCLAuthorizationStatusRestricted:
-        case kCLAuthorizationStatusDenied: {
-            // do some error handling
-            break;
-        }
-        default: {
-            
-            [self.locationManager startUpdatingLocation];
-            break;
-        }
-    }
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
-    if (oldLocation == nil) return;
-    
-    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
-    [timeFormat setDateFormat:@"HH:mm:ss.S"];
-    
-    //NSLog(@"LocationManager date: %@", [timeFormat stringFromDate:[NSDate date]]);
-    
-    BOOL isStaleLocation = (_startRecordTime != nil
-                            && [oldLocation.timestamp compare:_startRecordTime] == NSOrderedAscending);
-    
-    NSTimeInterval ageInSeconds = [newLocation.timestamp timeIntervalSinceNow];
-    
-    [_locationPingTimer invalidate];
-    
-    if (!isStaleLocation
-        && newLocation.horizontalAccuracy <= 10
-        && fabs(ageInSeconds) <= 1) {
-        
-        if (_readyToStart) {
-            [self handleNewLocation:newLocation];
-        } else {
-            [self setReadyToStart];
-        }
-    }
-    
-    // this will be invalidated above if a new location is received before it fires
-    _locationPingTimer = [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(requestNewLocation) userInfo:nil repeats:NO];
-    [[NSRunLoop mainRunLoop] addTimer:_locationPingTimer forMode:NSRunLoopCommonModes];
-}
-
-- (void)requestNewLocation
-{
-    [self.locationManager stopUpdatingLocation];
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error {
-    
-    if (error.code == kCLErrorDenied) {
-
-        [self.locationManager stopUpdatingLocation];
-    }
+    [self.motionService stopUpdates];
+    [self.locationService stopUpdates];
 }
 
 @end

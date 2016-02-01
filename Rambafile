@@ -11,10 +11,10 @@ xcodeproj_path: RaceData.xcodeproj
 project_target: RaceData
 
 # The file path for new modules
-project_file_path: RaceData/Classes/PresentationLayer/UserStories/
+project_file_path: RaceData/Classes/Presentation Layer/UserStories/
 
 # The Xcode group path to new modules
-project_group_path: RaceData/Classes/PresentationLayer/UserStories/
+project_group_path: RaceData/Classes/Presentation Layer/UserStories/
 
 ### Tests generation settings section
 # The tests target name

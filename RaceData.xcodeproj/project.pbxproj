@@ -7,18 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EF6E3ECEDEEFAD5F30BBC3 /* RDSpeedometerInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22495DCC2235E3ED434BC505 /* RDSpeedometerInteractor.m */; };
+		13A4EC1C5074E9083B7F1991 /* RDGPSInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F9262798A5BDEF59653CB2 /* RDGPSInteractor.m */; };
+		1CBB01451FBCB490B53DC52D /* RDSpeedometerAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C328A153BF98822DC627E45 /* RDSpeedometerAssemblyTests.m */; };
+		2B1B7B000ED10636357BC5B5 /* RDRootAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BD64B9DDF55A80830F4BBF /* RDRootAssemblyTests.m */; };
 		423E56FF19DE8D87A0ACA989 /* RDRaceInfoViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA60B0D8DCD10908926702C /* RDRaceInfoViewControllerTests.m */; };
+		429FEFFB4352B58573AD62F4 /* RDSpeedometerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55383B8F9BA105F400F7C47D /* RDSpeedometerViewControllerTests.m */; };
+		48CE9D69967FE1A0D8A11163 /* RDSpeedometerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8EFC5DD8087CD71E500311 /* RDSpeedometerRouter.m */; };
+		4C45CA5C7C5B527A81ACBA0E /* RDRootRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4E0201F3919768595F05F0 /* RDRootRouterTests.m */; };
 		53268D0D72936815D1F90016 /* RDRaceInfoRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AAB5226148FF41EB83F52D /* RDRaceInfoRouter.m */; };
+		55E1A9551AB3D5CD7E63B0EB /* RDGPSRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6592C544C8A33224B037241D /* RDGPSRouter.m */; };
 		55E3A35BBB2D00E6D4067D94 /* RDRaceInfoPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8ABA8367EF27892C19A424 /* RDRaceInfoPresenterTests.m */; };
+		6748A0B0506ECC09E195E502 /* RDSpeedometerRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE4FE2B3DE0F44FB3A5C640 /* RDSpeedometerRouterTests.m */; };
 		6A35ADECABDC6DE0C994AFFD /* RDRaceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */; };
 		6FCA96B1EDA38574843F245C /* RDRaceInfoAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */; };
 		71F725CE71231A377F37CAC8 /* RDRaceInfoAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB02E3640F0B4368E7E7994 /* RDRaceInfoAssemblyTests.m */; };
+		827FB55CC91892C4C8779A54 /* RDGPSAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 3978D74810B77090C11FAE80 /* RDGPSAssembly.m */; };
+		8458D245B57B7556E840AFDB /* RDRootAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C45F23550A874E748016109 /* RDRootAssembly.m */; };
+		8674B97198FC4CFF6AF919AC /* RDGPSAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A45A578B025AD612255046BC /* RDGPSAssemblyTests.m */; };
 		89633CFED7A9A032B02A6F5F /* RDRaceInfoPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */; };
+		8D298BCDCAD1A90C5F171B06 /* RDGPSPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BBE92D3DB18DB125E3AE626 /* RDGPSPresenterTests.m */; };
+		9322273C1CB4B99B4EEDBA56 /* RDRootInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F25E21C1CC06F3A559DA6 /* RDRootInteractor.m */; };
+		9914C4F5FBB31947CDE9BD85 /* RDGPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61712A780140897AE25A6043 /* RDGPSViewController.m */; };
+		9A97C9BCA08DBE3D6C1B9B23 /* RDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598F9B7D36B78BD87C1D7BC2 /* RDRootViewController.m */; };
+		9D81F7CACD53AABD6100D1D2 /* RDSpeedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D3C8C227D6612649FF9CD2 /* RDSpeedometerViewController.m */; };
 		A291AAD9579617DAD6912114 /* RDRaceInfoRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */; };
+		A47946BC92B9768B3E10DA99 /* RDGPSPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA84DBB13C1D094103A98047 /* RDGPSPresenter.m */; };
+		A572B2B8C9E0B7ED67A21983 /* RDGPSRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 543648C71CAFCC98C69181C2 /* RDGPSRouterTests.m */; };
+		AFED79A4C9635AF195476665 /* RDRootViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A8C56F51F1E8B75B9F6894 /* RDRootViewControllerTests.m */; };
+		B52CC3C6E1B75E9A16ACCB43 /* RDSpeedometerPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A801ECE583030EFAC9356185 /* RDSpeedometerPresenterTests.m */; };
+		BDEE6C3135D3E91D4DB5A6D6 /* RDSpeedometerInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D73644B10169733DD44FF4 /* RDSpeedometerInteractorTests.m */; };
 		C032758513CD50AD2F773B89 /* libPods-RaceDataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B799FD0017030DE8E037FC72 /* libPods-RaceDataTests.a */; };
+		C45787E783373F5F8AAEA09D /* RDRootInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BE8CCE95B40787829D128F /* RDRootInteractorTests.m */; };
 		C49B34A3C54EB2B058FA614C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246D2E616803E256E80DD860 /* libPods.a */; };
+		C58A4217A50325842D69AC3F /* RDRootRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A69ED19C338A6EFEA7863DE /* RDRootRouter.m */; };
+		C6242F4130CC5EF156E62441 /* RDSpeedometerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A96E8B2FE6E6FA698E12CCB7 /* RDSpeedometerPresenter.m */; };
+		C789C241A44036924D3E6794 /* RDSpeedometerAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F2FF45C3B0881692C5383A93 /* RDSpeedometerAssembly.m */; };
+		C9FEBC9FED5AC271F52E7D3F /* RDGPSInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B65BD1AE21D9E7E9EBA19A /* RDGPSInteractorTests.m */; };
+		CF53D024D78C9FD8F1346586 /* RDRootPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 999CE2D690539AC4A58E422D /* RDRootPresenter.m */; };
+		D2B61AC45169DC1B94502397 /* RDRootPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A1D84D81A283DF6182AAB8 /* RDRootPresenterTests.m */; };
 		DC927A50CB78E133DF5C8818 /* RDRaceInfoInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */; };
 		DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */; };
+		E2F2A55872701FDA76513E05 /* RDGPSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C211C1A35C3F9A9D2DBC275 /* RDGPSViewControllerTests.m */; };
+		F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A317A1C4112A2007DC313 /* RDStyleKit.m */; };
+		F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31821C4118E7007DC313 /* ServiceComponentsAssembly.m */; };
+		F51A31891C411C9B007DC313 /* LocationServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31881C411C9B007DC313 /* LocationServiceImplementation.m */; };
+		F51A318D1C415FFA007DC313 /* ModuleAssemblyBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A318C1C415FFA007DC313 /* ModuleAssemblyBase.m */; };
+		F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31901C416F7C007DC313 /* MotionServiceImplementation.m */; };
+		F51A31941C417570007DC313 /* RDSpeedometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31931C417570007DC313 /* RDSpeedometerView.m */; };
+		F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */; };
 		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
 		F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */; };
 		F58FE7C51C1C66980098D8CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C41C1C66980098D8CE /* main.m */; };
@@ -39,34 +76,118 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00733DE85B1B8DFAE6564C17 /* RDRootInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootInteractor.h; sourceTree = "<group>"; };
+		060939824678EF5BED4A2B4D /* RDSpeedometerRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerRouter.h; sourceTree = "<group>"; };
 		069EADD2EBBCE5D098234498 /* RDRaceInfoViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewOutput.h; sourceTree = "<group>"; };
+		08742D1E4F845D5D1963298D /* RDSpeedometerPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerPresenter.h; sourceTree = "<group>"; };
+		0C211C1A35C3F9A9D2DBC275 /* RDGPSViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSViewControllerTests.m; sourceTree = "<group>"; };
 		0C76F4F001C43353D3F36073 /* Pods-RaceDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaceDataTests/Pods-RaceDataTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoInteractor.m; sourceTree = "<group>"; };
 		0D85AD66B79411C6519966D6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1759C751891EFCF6798CDE95 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1C4136C728E32F6DCE404754 /* RDGPSRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSRouter.h; sourceTree = "<group>"; };
+		22495DCC2235E3ED434BC505 /* RDSpeedometerInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerInteractor.m; sourceTree = "<group>"; };
 		238AEC08833B6E26223DE920 /* RDRaceInfoInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractorInput.h; sourceTree = "<group>"; };
 		246D2E616803E256E80DD860 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2557F8E4590CB869F91CC69C /* RDRootPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootPresenter.h; sourceTree = "<group>"; };
 		25A103550A7989F7D3B355FF /* RDRaceInfoPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoPresenter.h; sourceTree = "<group>"; };
+		2D8EFC5DD8087CD71E500311 /* RDSpeedometerRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerRouter.m; sourceTree = "<group>"; };
+		312914B99774E09799D457B0 /* RDGPSModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSModuleInput.h; sourceTree = "<group>"; };
+		337574825F87725B3BDDE116 /* RDRootInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootInteractorInput.h; sourceTree = "<group>"; };
+		33D3C8C227D6612649FF9CD2 /* RDSpeedometerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerViewController.m; sourceTree = "<group>"; };
+		39393903B0C88B4C2593E327 /* RDSpeedometerViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerViewOutput.h; sourceTree = "<group>"; };
+		3978D74810B77090C11FAE80 /* RDGPSAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSAssembly.m; sourceTree = "<group>"; };
+		3BBE92D3DB18DB125E3AE626 /* RDGPSPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSPresenterTests.m; sourceTree = "<group>"; };
+		3C4F55A99892A947A514CF6E /* RDSpeedometerInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerInteractorInput.h; sourceTree = "<group>"; };
 		3DAAA17819F7350C5E3501B0 /* Pods-RaceDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RaceDataTests/Pods-RaceDataTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F7AAE49912915AE597CB0FC /* RDRootRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootRouterInput.h; sourceTree = "<group>"; };
+		42BD64B9DDF55A80830F4BBF /* RDRootAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootAssemblyTests.m; sourceTree = "<group>"; };
 		44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoInteractorTests.m; sourceTree = "<group>"; };
+		47D73644B10169733DD44FF4 /* RDSpeedometerInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSpeedometerInteractorTests.m; path = Speedometer/Interactor/RDSpeedometerInteractorTests.m; sourceTree = "<group>"; };
+		4CE4FE2B3DE0F44FB3A5C640 /* RDSpeedometerRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSpeedometerRouterTests.m; path = Speedometer/Router/RDSpeedometerRouterTests.m; sourceTree = "<group>"; };
+		535FAEB4F3E7AF7246C15AAD /* RDRootViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootViewInput.h; sourceTree = "<group>"; };
+		543648C71CAFCC98C69181C2 /* RDGPSRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSRouterTests.m; sourceTree = "<group>"; };
+		55383B8F9BA105F400F7C47D /* RDSpeedometerViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSpeedometerViewControllerTests.m; path = Speedometer/View/RDSpeedometerViewControllerTests.m; sourceTree = "<group>"; };
+		562BBE94C2F3F77CEC63AADC /* RDSpeedometerInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerInteractor.h; sourceTree = "<group>"; };
 		596802974A6FFA37691D3DDC /* RDRaceInfoInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractor.h; sourceTree = "<group>"; };
+		598F9B7D36B78BD87C1D7BC2 /* RDRootViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootViewController.m; sourceTree = "<group>"; };
+		5A69ED19C338A6EFEA7863DE /* RDRootRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootRouter.m; sourceTree = "<group>"; };
+		5F4EF35BDDE39C52376B1824 /* RDSpeedometerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerViewController.h; sourceTree = "<group>"; };
 		6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoAssembly.m; sourceTree = "<group>"; };
+		61712A780140897AE25A6043 /* RDGPSViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSViewController.m; sourceTree = "<group>"; };
+		63C79D747C6144A96E8F3A52 /* RDGPSAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSAssembly.h; sourceTree = "<group>"; };
+		64C08DE954DE28FA7C9C55D3 /* RDGPSInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSInteractorOutput.h; sourceTree = "<group>"; };
+		653F25E21C1CC06F3A559DA6 /* RDRootInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootInteractor.m; sourceTree = "<group>"; };
+		6592C544C8A33224B037241D /* RDGPSRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSRouter.m; sourceTree = "<group>"; };
+		65C5BD83DA714875EA1A277C /* RDRootViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootViewOutput.h; sourceTree = "<group>"; };
+		661090C52B1CDB0E112E4660 /* RDGPSPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSPresenter.h; sourceTree = "<group>"; };
+		6B4E0201F3919768595F05F0 /* RDRootRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootRouterTests.m; sourceTree = "<group>"; };
 		6DA60B0D8DCD10908926702C /* RDRaceInfoViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoViewControllerTests.m; sourceTree = "<group>"; };
+		71F9262798A5BDEF59653CB2 /* RDGPSInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSInteractor.m; sourceTree = "<group>"; };
+		8383FA9DDC44F3C9DE95EBEB /* RDRootModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootModuleInput.h; sourceTree = "<group>"; };
+		8A3C00D149537217A66D2D0C /* RDGPSViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSViewInput.h; sourceTree = "<group>"; };
+		8C45F23550A874E748016109 /* RDRootAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootAssembly.m; sourceTree = "<group>"; };
+		8F1ABC22639CCF32D8428035 /* RDRootAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootAssembly_Testable.h; sourceTree = "<group>"; };
+		907D70B31BF533AD4563EC7A /* RDSpeedometerViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerViewInput.h; sourceTree = "<group>"; };
+		92D9CECA6A64F0EFAF9EC3B5 /* RDGPSViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSViewController.h; sourceTree = "<group>"; };
 		9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoPresenter.m; sourceTree = "<group>"; };
+		999CE2D690539AC4A58E422D /* RDRootPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootPresenter.m; sourceTree = "<group>"; };
+		9C328A153BF98822DC627E45 /* RDSpeedometerAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSpeedometerAssemblyTests.m; path = Speedometer/Assembly/RDSpeedometerAssemblyTests.m; sourceTree = "<group>"; };
 		9D57BB44BF416CD20DC20086 /* RDRaceInfoRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoRouterInput.h; sourceTree = "<group>"; };
 		9F8ABA8367EF27892C19A424 /* RDRaceInfoPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoPresenterTests.m; sourceTree = "<group>"; };
+		9F9B8E3F208F7052C59E37DE /* RDGPSInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSInteractor.h; sourceTree = "<group>"; };
+		A45A578B025AD612255046BC /* RDGPSAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSAssemblyTests.m; sourceTree = "<group>"; };
+		A495BB13D09E38218670CE50 /* RDGPSRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSRouterInput.h; sourceTree = "<group>"; };
+		A5F34D6388B44722452820C8 /* RDGPSInteractorInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSInteractorInput.h; sourceTree = "<group>"; };
+		A801ECE583030EFAC9356185 /* RDSpeedometerPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RDSpeedometerPresenterTests.m; path = Speedometer/Presenter/RDSpeedometerPresenterTests.m; sourceTree = "<group>"; };
+		A84DA781637576D138423080 /* RDSpeedometerRouterInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerRouterInput.h; sourceTree = "<group>"; };
+		A96E8B2FE6E6FA698E12CCB7 /* RDSpeedometerPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerPresenter.m; sourceTree = "<group>"; };
+		ACE18BEB3D09DDA9943CF5C0 /* RDRootInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootInteractorOutput.h; sourceTree = "<group>"; };
 		AEB02E3640F0B4368E7E7994 /* RDRaceInfoAssemblyTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoAssemblyTests.m; sourceTree = "<group>"; };
+		B1B65BD1AE21D9E7E9EBA19A /* RDGPSInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSInteractorTests.m; sourceTree = "<group>"; };
+		B1E61D89C7DF918BE3212791 /* RDGPSAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSAssembly_Testable.h; sourceTree = "<group>"; };
+		B41533368D81FECF1B37A4F5 /* RDRootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootViewController.h; sourceTree = "<group>"; };
+		B5BE8CCE95B40787829D128F /* RDRootInteractorTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootInteractorTests.m; sourceTree = "<group>"; };
 		B799FD0017030DE8E037FC72 /* libPods-RaceDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RaceDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9435B4A2E0B2F225C2F900B /* RDGPSViewOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDGPSViewOutput.h; sourceTree = "<group>"; };
 		BA428A44ABDC629E7635D1A9 /* RDRaceInfoInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoInteractorOutput.h; sourceTree = "<group>"; };
+		BA84DBB13C1D094103A98047 /* RDGPSPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDGPSPresenter.m; sourceTree = "<group>"; };
 		BAC27CF96786147B3BB56D72 /* RDRaceInfoModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoModuleInput.h; sourceTree = "<group>"; };
 		C15170DFD4AA4D97334158F9 /* RDRaceInfoViewInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewInput.h; sourceTree = "<group>"; };
 		D0993F3D3549355F973C89BF /* RDRaceInfoRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoRouter.h; sourceTree = "<group>"; };
+		D2A8C56F51F1E8B75B9F6894 /* RDRootViewControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootViewControllerTests.m; sourceTree = "<group>"; };
+		D6A1D84D81A283DF6182AAB8 /* RDRootPresenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRootPresenterTests.m; sourceTree = "<group>"; };
 		D78CE58E5302827DB1ADEA8A /* RDRaceInfoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoViewController.h; sourceTree = "<group>"; };
 		D7AAB5226148FF41EB83F52D /* RDRaceInfoRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouter.m; sourceTree = "<group>"; };
 		DC0D6693DE731CDF9F02E885 /* RDRaceInfoAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoAssembly_Testable.h; sourceTree = "<group>"; };
+		DF04FF0AE61DD37C892097AB /* RDRootAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootAssembly.h; sourceTree = "<group>"; };
 		DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoViewController.m; sourceTree = "<group>"; };
 		DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouterTests.m; sourceTree = "<group>"; };
+		E90DB471B401B2962D05085D /* RDSpeedometerInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerInteractorOutput.h; sourceTree = "<group>"; };
+		EC510991228EF31EBE3A0E5B /* RDRootRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootRouter.h; sourceTree = "<group>"; };
+		F221D20EF0DAA75D75E49AA5 /* RDSpeedometerModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerModuleInput.h; sourceTree = "<group>"; };
+		F2FF45C3B0881692C5383A93 /* RDSpeedometerAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerAssembly.m; sourceTree = "<group>"; };
 		F39E383884F344FE10A88AD4 /* RDRaceInfoAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRaceInfoAssembly.h; sourceTree = "<group>"; };
+		F3F2548FE98926E69D1F0ECE /* RDSpeedometerAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerAssembly.h; sourceTree = "<group>"; };
+		F51408461C58958000785E95 /* RDRootContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDRootContent.h; sourceTree = "<group>"; };
+		F51408471C5898A800785E95 /* RDRootContentEmbedder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDRootContentEmbedder.h; sourceTree = "<group>"; };
+		F51A31791C4112A2007DC313 /* RDStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDStyleKit.h; path = StyleKit/RDStyleKit.h; sourceTree = "<group>"; };
+		F51A317A1C4112A2007DC313 /* RDStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDStyleKit.m; path = StyleKit/RDStyleKit.m; sourceTree = "<group>"; };
+		F51A31801C41184E007DC313 /* ServiceComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ServiceComponents.h; path = "Buisness Logic Layer/Assemblies/ServiceComponents.h"; sourceTree = "<group>"; };
+		F51A31811C4118E7007DC313 /* ServiceComponentsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceComponentsAssembly.h; path = "Buisness Logic Layer/Assemblies/ServiceComponentsAssembly.h"; sourceTree = "<group>"; };
+		F51A31821C4118E7007DC313 /* ServiceComponentsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceComponentsAssembly.m; path = "Buisness Logic Layer/Assemblies/ServiceComponentsAssembly.m"; sourceTree = "<group>"; };
+		F51A31861C411A45007DC313 /* LocationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = "Buisness Logic Layer/Services/LocationService/LocationService.h"; sourceTree = "<group>"; };
+		F51A31871C411C9B007DC313 /* LocationServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationServiceImplementation.h; path = "Buisness Logic Layer/Services/LocationService/LocationServiceImplementation.h"; sourceTree = "<group>"; };
+		F51A31881C411C9B007DC313 /* LocationServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationServiceImplementation.m; path = "Buisness Logic Layer/Services/LocationService/LocationServiceImplementation.m"; sourceTree = "<group>"; };
+		F51A318B1C415FFA007DC313 /* ModuleAssemblyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleAssemblyBase.h; path = ModuleAssamblyBase/ModuleAssemblyBase.h; sourceTree = "<group>"; };
+		F51A318C1C415FFA007DC313 /* ModuleAssemblyBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleAssemblyBase.m; path = ModuleAssamblyBase/ModuleAssemblyBase.m; sourceTree = "<group>"; };
+		F51A318E1C416F0F007DC313 /* MotionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MotionService.h; path = "Buisness Logic Layer/Services/MotionService/MotionService.h"; sourceTree = "<group>"; };
+		F51A318F1C416F7C007DC313 /* MotionServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionServiceImplementation.h; path = "Buisness Logic Layer/Services/MotionService/MotionServiceImplementation.h"; sourceTree = "<group>"; };
+		F51A31901C416F7C007DC313 /* MotionServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionServiceImplementation.m; path = "Buisness Logic Layer/Services/MotionService/MotionServiceImplementation.m"; sourceTree = "<group>"; };
+		F51A31921C417570007DC313 /* RDSpeedometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerView.h; sourceTree = "<group>"; };
+		F51A31931C417570007DC313 /* RDSpeedometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerView.m; sourceTree = "<group>"; };
+		F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerLayer.h; sourceTree = "<group>"; };
+		F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerLayer.m; sourceTree = "<group>"; };
 		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F58FE7C01C1C66980098D8CE /* RaceData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +200,8 @@
 		F58FE7D91C1C66980098D8CE /* RaceDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaceDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaceDataTests.m; sourceTree = "<group>"; };
 		F58FE7DF1C1C66980098D8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C790EA1C5F3EDF000E2255 /* RDEmbeddedContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDEmbeddedContent.h; sourceTree = "<group>"; };
+		FF4650E940B36242D7ABFAA5 /* RDSpeedometerAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSpeedometerAssembly_Testable.h; path = Speedometer/Assembly/RDSpeedometerAssembly_Testable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +233,65 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		074E4D32D6F034CF46F768F3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DF04FF0AE61DD37C892097AB /* RDRootAssembly.h */,
+				8C45F23550A874E748016109 /* RDRootAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0B1CFC7EA2540257DB7F02AB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				63C79D747C6144A96E8F3A52 /* RDGPSAssembly.h */,
+				3978D74810B77090C11FAE80 /* RDGPSAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		10C2FAD181CF41A314E409C9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				543648C71CAFCC98C69181C2 /* RDGPSRouterTests.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		146EAF8F86CBE866B72522DF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3BBE92D3DB18DB125E3AE626 /* RDGPSPresenterTests.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18303BC644B3EB827B72BAE1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8383FA9DDC44F3C9DE95EBEB /* RDRootModuleInput.h */,
+				2557F8E4590CB869F91CC69C /* RDRootPresenter.h */,
+				999CE2D690539AC4A58E422D /* RDRootPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1908658A69EE4952FA8A9D2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				907D70B31BF533AD4563EC7A /* RDSpeedometerViewInput.h */,
+				39393903B0C88B4C2593E327 /* RDSpeedometerViewOutput.h */,
+				5F4EF35BDDE39C52376B1824 /* RDSpeedometerViewController.h */,
+				33D3C8C227D6612649FF9CD2 /* RDSpeedometerViewController.m */,
+				F51A31921C417570007DC313 /* RDSpeedometerView.h */,
+				F51A31931C417570007DC313 /* RDSpeedometerView.m */,
+				F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */,
+				F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		251637245DF3A69027784B1B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +308,25 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		2A8749EC57817EC2EF691153 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F3F2548FE98926E69D1F0ECE /* RDSpeedometerAssembly.h */,
+				F2FF45C3B0881692C5383A93 /* RDSpeedometerAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		2E987B366BEB17F0777345A7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3F7AAE49912915AE597CB0FC /* RDRootRouterInput.h */,
+				EC510991228EF31EBE3A0E5B /* RDRootRouter.h */,
+				5A69ED19C338A6EFEA7863DE /* RDRootRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3EFFA7DFCCCA868ECC3F3469 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +337,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		3F70D4A825564EAFAE674FB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A801ECE583030EFAC9356185 /* RDSpeedometerPresenterTests.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 		40109186164569D1B87D48AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +353,14 @@
 				B799FD0017030DE8E037FC72 /* libPods-RaceDataTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40A777D6752BFABC9D2DF12D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C211C1A35C3F9A9D2DBC275 /* RDGPSViewControllerTests.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		437C8278B06F3D469FDA654C /* Pods */ = {
@@ -168,6 +385,18 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		47C3CABA9C67F37104766E64 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6CCF469EF0CB01E0EE2B6831 /* Assembly */,
+				6224E1F89AE044FDA42756C6 /* View */,
+				9A41398F574FF29D6F8F6EFB /* Presenter */,
+				5A03A29D4E78270E95E9C41B /* Interactor */,
+				7AA14B16FB77BBDD92C34819 /* Router */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		4899DD69B4B97D568B8980AF /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +418,105 @@
 			path = RaceInfo;
 			sourceTree = "<group>";
 		};
+		4B8DA7AC28BB94EBEC3A3F43 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				074E4D32D6F034CF46F768F3 /* Assembly */,
+				DC6DC30279ABFEF9280FB555 /* View */,
+				18303BC644B3EB827B72BAE1 /* Presenter */,
+				4D11900CD5B3D96310BDFEFA /* Interactor */,
+				2E987B366BEB17F0777345A7 /* Router */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		4D11900CD5B3D96310BDFEFA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				337574825F87725B3BDDE116 /* RDRootInteractorInput.h */,
+				ACE18BEB3D09DDA9943CF5C0 /* RDRootInteractorOutput.h */,
+				00733DE85B1B8DFAE6564C17 /* RDRootInteractor.h */,
+				653F25E21C1CC06F3A559DA6 /* RDRootInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4D94830CCE2D3AE065014D13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A3C00D149537217A66D2D0C /* RDGPSViewInput.h */,
+				B9435B4A2E0B2F225C2F900B /* RDGPSViewOutput.h */,
+				92D9CECA6A64F0EFAF9EC3B5 /* RDGPSViewController.h */,
+				61712A780140897AE25A6043 /* RDGPSViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FF831367FE23099A830149E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				312914B99774E09799D457B0 /* RDGPSModuleInput.h */,
+				661090C52B1CDB0E112E4660 /* RDGPSPresenter.h */,
+				BA84DBB13C1D094103A98047 /* RDGPSPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50734025529F141F76145B46 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A84DA781637576D138423080 /* RDSpeedometerRouterInput.h */,
+				060939824678EF5BED4A2B4D /* RDSpeedometerRouter.h */,
+				2D8EFC5DD8087CD71E500311 /* RDSpeedometerRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5A03A29D4E78270E95E9C41B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B5BE8CCE95B40787829D128F /* RDRootInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6224E1F89AE044FDA42756C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2A8C56F51F1E8B75B9F6894 /* RDRootViewControllerTests.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CCF469EF0CB01E0EE2B6831 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				42BD64B9DDF55A80830F4BBF /* RDRootAssemblyTests.m */,
+				8F1ABC22639CCF32D8428035 /* RDRootAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		71A7E62B48F40D5848C15430 /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				0B1CFC7EA2540257DB7F02AB /* Assembly */,
+				4D94830CCE2D3AE065014D13 /* View */,
+				4FF831367FE23099A830149E /* Presenter */,
+				8D61C898199CBC3C3168D273 /* Interactor */,
+				ACE3EF763B05E52D80D7EDD8 /* Router */,
+			);
+			path = GPS;
+			sourceTree = "<group>";
+		};
+		72F24910297BF8172C975EF1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				47D73644B10169733DD44FF4 /* RDSpeedometerInteractorTests.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
 		743215F599B7F17174E281A7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +525,70 @@
 				9959A86F72DB26A9BFA42B72 /* RDRaceInfoPresenter.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7AA14B16FB77BBDD92C34819 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6B4E0201F3919768595F05F0 /* RDRootRouterTests.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7B19A4ADE9FF203D5790B965 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3C4F55A99892A947A514CF6E /* RDSpeedometerInteractorInput.h */,
+				E90DB471B401B2962D05085D /* RDSpeedometerInteractorOutput.h */,
+				562BBE94C2F3F77CEC63AADC /* RDSpeedometerInteractor.h */,
+				22495DCC2235E3ED434BC505 /* RDSpeedometerInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7CC025D4E9818A20143DC488 /* Speedometer */ = {
+			isa = PBXGroup;
+			children = (
+				FE9B2A5EAE4C6F2155F8FA9D /* Assembly */,
+				EA2F8A20F7541C44C26E654D /* View */,
+				3F70D4A825564EAFAE674FB1 /* Presenter */,
+				72F24910297BF8172C975EF1 /* Interactor */,
+				C0E2A8B069CD86B4AE72E63F /* Router */,
+			);
+			name = Speedometer;
+			sourceTree = "<group>";
+		};
+		84548C25BF0627A7677895F4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F221D20EF0DAA75D75E49AA5 /* RDSpeedometerModuleInput.h */,
+				08742D1E4F845D5D1963298D /* RDSpeedometerPresenter.h */,
+				A96E8B2FE6E6FA698E12CCB7 /* RDSpeedometerPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8D61C898199CBC3C3168D273 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A5F34D6388B44722452820C8 /* RDGPSInteractorInput.h */,
+				64C08DE954DE28FA7C9C55D3 /* RDGPSInteractorOutput.h */,
+				9F9B8E3F208F7052C59E37DE /* RDGPSInteractor.h */,
+				71F9262798A5BDEF59653CB2 /* RDGPSInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8FB4597AF62EEBEB276A3AA2 /* Speedometer */ = {
+			isa = PBXGroup;
+			children = (
+				2A8749EC57817EC2EF691153 /* Assembly */,
+				1908658A69EE4952FA8A9D2B /* View */,
+				84548C25BF0627A7677895F4 /* Presenter */,
+				7B19A4ADE9FF203D5790B965 /* Interactor */,
+				50734025529F141F76145B46 /* Router */,
+			);
+			path = Speedometer;
 			sourceTree = "<group>";
 		};
 		992060EBC9228BB74D5B3221 /* View */ = {
@@ -210,12 +602,67 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9A41398F574FF29D6F8F6EFB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D6A1D84D81A283DF6182AAB8 /* RDRootPresenterTests.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F7CF89E319D4DC6A689CE43 /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				B61664BDDCB61AE2B1720A33 /* Assembly */,
+				40A777D6752BFABC9D2DF12D /* View */,
+				146EAF8F86CBE866B72522DF /* Presenter */,
+				B5ABDEAADA96DB0A3F3C71C8 /* Interactor */,
+				10C2FAD181CF41A314E409C9 /* Router */,
+			);
+			path = GPS;
+			sourceTree = "<group>";
+		};
 		A2C05C85488AA07E28C98F2C /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		ACE3EF763B05E52D80D7EDD8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A495BB13D09E38218670CE50 /* RDGPSRouterInput.h */,
+				1C4136C728E32F6DCE404754 /* RDGPSRouter.h */,
+				6592C544C8A33224B037241D /* RDGPSRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B5ABDEAADA96DB0A3F3C71C8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1B65BD1AE21D9E7E9EBA19A /* RDGPSInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B61664BDDCB61AE2B1720A33 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				A45A578B025AD612255046BC /* RDGPSAssemblyTests.m */,
+				B1E61D89C7DF918BE3212791 /* RDGPSAssembly_Testable.h */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		C0E2A8B069CD86B4AE72E63F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4CE4FE2B3DE0F44FB3A5C640 /* RDSpeedometerRouterTests.m */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 		C5C978B36FD88DDCA65CFBA0 /* RaceInfo */ = {
@@ -230,6 +677,19 @@
 			path = RaceInfo;
 			sourceTree = "<group>";
 		};
+		DC6DC30279ABFEF9280FB555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				535FAEB4F3E7AF7246C15AAD /* RDRootViewInput.h */,
+				65C5BD83DA714875EA1A277C /* RDRootViewOutput.h */,
+				B41533368D81FECF1B37A4F5 /* RDRootViewController.h */,
+				598F9B7D36B78BD87C1D7BC2 /* RDRootViewController.m */,
+				F51408461C58958000785E95 /* RDRootContent.h */,
+				F51408471C5898A800785E95 /* RDRootContentEmbedder.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E855F23152428E6863FC0AD1 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +697,80 @@
 				6074F4912C81A61209826DF1 /* RDRaceInfoAssembly.m */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		EA2F8A20F7541C44C26E654D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55383B8F9BA105F400F7C47D /* RDSpeedometerViewControllerTests.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F51A31781C411294007DC313 /* StyleKit */ = {
+			isa = PBXGroup;
+			children = (
+				F51A31791C4112A2007DC313 /* RDStyleKit.h */,
+				F51A317A1C4112A2007DC313 /* RDStyleKit.m */,
+			);
+			name = StyleKit;
+			sourceTree = "<group>";
+		};
+		F51A317D1C411778007DC313 /* Buisness Logic Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F51A317E1C411795007DC313 /* Assemblies */,
+				F51A317F1C4117B0007DC313 /* Services */,
+			);
+			name = "Buisness Logic Layer";
+			sourceTree = "<group>";
+		};
+		F51A317E1C411795007DC313 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				F51A31801C41184E007DC313 /* ServiceComponents.h */,
+				F51A31811C4118E7007DC313 /* ServiceComponentsAssembly.h */,
+				F51A31821C4118E7007DC313 /* ServiceComponentsAssembly.m */,
+			);
+			name = Assemblies;
+			sourceTree = "<group>";
+		};
+		F51A317F1C4117B0007DC313 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F51A31851C41194A007DC313 /* MotionService */,
+				F51A31841C411938007DC313 /* LocationService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		F51A31841C411938007DC313 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				F51A31861C411A45007DC313 /* LocationService.h */,
+				F51A31871C411C9B007DC313 /* LocationServiceImplementation.h */,
+				F51A31881C411C9B007DC313 /* LocationServiceImplementation.m */,
+			);
+			name = LocationService;
+			sourceTree = "<group>";
+		};
+		F51A31851C41194A007DC313 /* MotionService */ = {
+			isa = PBXGroup;
+			children = (
+				F51A318E1C416F0F007DC313 /* MotionService.h */,
+				F51A318F1C416F7C007DC313 /* MotionServiceImplementation.h */,
+				F51A31901C416F7C007DC313 /* MotionServiceImplementation.m */,
+			);
+			name = MotionService;
+			sourceTree = "<group>";
+		};
+		F51A318A1C415FC3007DC313 /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				F51A318B1C415FFA007DC313 /* ModuleAssemblyBase.h */,
+				F51A318C1C415FFA007DC313 /* ModuleAssemblyBase.m */,
+			);
+			name = Assemblies;
 			sourceTree = "<group>";
 		};
 		F54520C51C1C806500F795F1 /* Resources */ = {
@@ -250,9 +784,9 @@
 		F54520C61C1C809500F795F1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F51A317D1C411778007DC313 /* Buisness Logic Layer */,
 				F54520C71C1C80CB00F795F1 /* Application Layer */,
 				F54520C81C1C80DF00F795F1 /* Presentation Layer */,
-				F54520CE1C1FD7B000F795F1 /* Buisnes Logic */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -269,9 +803,11 @@
 		F54520C81C1C80DF00F795F1 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				F51A318A1C415FC3007DC313 /* Assemblies */,
 				F54520C91C1C813200F795F1 /* UserStories */,
 				F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */,
 				F58FE7CC1C1C66980098D8CE /* Main.storyboard */,
+				F5C790EA1C5F3EDF000E2255 /* RDEmbeddedContent.h */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -280,15 +816,11 @@
 			isa = PBXGroup;
 			children = (
 				4B451D47ACB1A9DC937E28B0 /* RaceInfo */,
+				8FB4597AF62EEBEB276A3AA2 /* Speedometer */,
+				4B8DA7AC28BB94EBEC3A3F43 /* Root */,
+				71A7E62B48F40D5848C15430 /* GPS */,
 			);
 			path = UserStories;
-			sourceTree = "<group>";
-		};
-		F54520CE1C1FD7B000F795F1 /* Buisnes Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Buisnes Logic";
 			sourceTree = "<group>";
 		};
 		F58FE7B71C1C66980098D8CE = {
@@ -324,6 +856,7 @@
 		F58FE7C31C1C66980098D8CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F51A31781C411294007DC313 /* StyleKit */,
 				F58FE7D41C1C66980098D8CE /* Info.plist */,
 				F58FE7C41C1C66980098D8CE /* main.m */,
 			);
@@ -336,8 +869,20 @@
 				C5C978B36FD88DDCA65CFBA0 /* RaceInfo */,
 				F58FE7DF1C1C66980098D8CE /* Info.plist */,
 				F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */,
+				7CC025D4E9818A20143DC488 /* Speedometer */,
+				47C3CABA9C67F37104766E64 /* Root */,
+				9F7CF89E319D4DC6A689CE43 /* GPS */,
 			);
 			path = RaceDataTests;
+			sourceTree = "<group>";
+		};
+		FE9B2A5EAE4C6F2155F8FA9D /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9C328A153BF98822DC627E45 /* RDSpeedometerAssemblyTests.m */,
+				FF4650E940B36242D7ABFAA5 /* RDSpeedometerAssembly_Testable.h */,
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,13 +1084,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51A31941C417570007DC313 /* RDSpeedometerView.m in Sources */,
+				F51A318D1C415FFA007DC313 /* ModuleAssemblyBase.m in Sources */,
 				F58FE7C81C1C66980098D8CE /* AppDelegate.m in Sources */,
 				F58FE7C51C1C66980098D8CE /* main.m in Sources */,
 				6FCA96B1EDA38574843F245C /* RDRaceInfoAssembly.m in Sources */,
 				6A35ADECABDC6DE0C994AFFD /* RDRaceInfoViewController.m in Sources */,
 				89633CFED7A9A032B02A6F5F /* RDRaceInfoPresenter.m in Sources */,
 				DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */,
+				F51A31891C411C9B007DC313 /* LocationServiceImplementation.m in Sources */,
+				F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */,
 				53268D0D72936815D1F90016 /* RDRaceInfoRouter.m in Sources */,
+				C789C241A44036924D3E6794 /* RDSpeedometerAssembly.m in Sources */,
+				F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */,
+				9D81F7CACD53AABD6100D1D2 /* RDSpeedometerViewController.m in Sources */,
+				F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */,
+				C6242F4130CC5EF156E62441 /* RDSpeedometerPresenter.m in Sources */,
+				F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */,
+				00EF6E3ECEDEEFAD5F30BBC3 /* RDSpeedometerInteractor.m in Sources */,
+				48CE9D69967FE1A0D8A11163 /* RDSpeedometerRouter.m in Sources */,
+				8458D245B57B7556E840AFDB /* RDRootAssembly.m in Sources */,
+				9A97C9BCA08DBE3D6C1B9B23 /* RDRootViewController.m in Sources */,
+				CF53D024D78C9FD8F1346586 /* RDRootPresenter.m in Sources */,
+				9322273C1CB4B99B4EEDBA56 /* RDRootInteractor.m in Sources */,
+				C58A4217A50325842D69AC3F /* RDRootRouter.m in Sources */,
+				827FB55CC91892C4C8779A54 /* RDGPSAssembly.m in Sources */,
+				9914C4F5FBB31947CDE9BD85 /* RDGPSViewController.m in Sources */,
+				A47946BC92B9768B3E10DA99 /* RDGPSPresenter.m in Sources */,
+				13A4EC1C5074E9083B7F1991 /* RDGPSInteractor.m in Sources */,
+				55E1A9551AB3D5CD7E63B0EB /* RDGPSRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +1126,21 @@
 				55E3A35BBB2D00E6D4067D94 /* RDRaceInfoPresenterTests.m in Sources */,
 				DC927A50CB78E133DF5C8818 /* RDRaceInfoInteractorTests.m in Sources */,
 				A291AAD9579617DAD6912114 /* RDRaceInfoRouterTests.m in Sources */,
+				1CBB01451FBCB490B53DC52D /* RDSpeedometerAssemblyTests.m in Sources */,
+				429FEFFB4352B58573AD62F4 /* RDSpeedometerViewControllerTests.m in Sources */,
+				B52CC3C6E1B75E9A16ACCB43 /* RDSpeedometerPresenterTests.m in Sources */,
+				BDEE6C3135D3E91D4DB5A6D6 /* RDSpeedometerInteractorTests.m in Sources */,
+				6748A0B0506ECC09E195E502 /* RDSpeedometerRouterTests.m in Sources */,
+				2B1B7B000ED10636357BC5B5 /* RDRootAssemblyTests.m in Sources */,
+				AFED79A4C9635AF195476665 /* RDRootViewControllerTests.m in Sources */,
+				D2B61AC45169DC1B94502397 /* RDRootPresenterTests.m in Sources */,
+				C45787E783373F5F8AAEA09D /* RDRootInteractorTests.m in Sources */,
+				4C45CA5C7C5B527A81ACBA0E /* RDRootRouterTests.m in Sources */,
+				8674B97198FC4CFF6AF919AC /* RDGPSAssemblyTests.m in Sources */,
+				E2F2A55872701FDA76513E05 /* RDGPSViewControllerTests.m in Sources */,
+				8D298BCDCAD1A90C5F171B06 /* RDGPSPresenterTests.m in Sources */,
+				C9FEBC9FED5AC271F52E7D3F /* RDGPSInteractorTests.m in Sources */,
+				A572B2B8C9E0B7ED67A21983 /* RDGPSRouterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

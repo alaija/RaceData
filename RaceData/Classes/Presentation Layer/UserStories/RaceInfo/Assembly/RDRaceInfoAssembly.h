@@ -6,7 +6,7 @@
 //  Copyright 2015 RaceData. All rights reserved.
 //
 
-#import <Typhoon/Typhoon.h>
+#import "ModuleAssemblyBase.h"
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
 /**
@@ -14,6 +14,6 @@
 
  RaceInfo module
  */
-@interface RDRaceInfoAssembly : TyphoonAssembly <RamblerInitialAssembly>
+@interface RDRaceInfoAssembly : ModuleAssemblyBase <RamblerInitialAssembly>
 
 @end

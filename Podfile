@@ -6,6 +6,7 @@ pod 'PureLayout'
 pod 'RamblerTyphoonUtils/AssemblyCollector'
 pod 'ViperMcFlurry'
 pod 'BlocksKit'
+pod 'EDSunriseSet'
 
 target 'RaceDataTests', :exclusive => true do
     pod 'OCMock'
