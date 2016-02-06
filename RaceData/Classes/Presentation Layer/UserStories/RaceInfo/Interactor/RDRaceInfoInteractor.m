@@ -38,13 +38,15 @@ static void *RaceInfoMotionServiceContext = &RaceInfoMotionServiceContext;
         } else if ([keyPath isEqualToString:@"signalQuality"]){
             GPSSignalQuality quality = [change[@"new"] integerValue];
             
-            if (quality == GPSSignalQualityHigh) {
+            if (quality >= GPSSignalQualityHigh) {
                 [self.output didSetUpManagers];
                 
                 [self.locationService removeObserver:self
                                           forKeyPath:@"signalQuality"
                                              context:RaceInfoLocationServiceContext];
                 
+            } else {
+                // Low signal race should be stopped
             }
         }
     } else if (context == RaceInfoMotionServiceContext) {

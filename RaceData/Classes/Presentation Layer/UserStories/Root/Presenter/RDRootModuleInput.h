@@ -17,8 +17,4 @@
  */
 - (void)configureModule;
 
-- (void)showSpeedometer;
-- (void)showRaceInfo;
-- (void)showSettings;
-
 @end

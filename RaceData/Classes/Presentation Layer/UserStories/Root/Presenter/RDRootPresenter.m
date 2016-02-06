@@ -24,12 +24,25 @@
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
-    [self showSpeedometer];
+    [self.router showContentWithIdentifier:@"Speedometer"];
 }
 
-- (void)showSpeedometer
+- (void)navigateFromViewWithIdentifier:(NSString *)identifier
 {
-    [self.router showContentWithIdentifier:@"Speedometer"];
+    NSString *nextViewIdentifier;
+    
+    if ([identifier isEqualToString:@"Speedometer"]) {
+        nextViewIdentifier = @"RaceInfo";
+    } else {
+        nextViewIdentifier = @"Speedometer";
+    }
+    
+    [self.router showContentWithIdentifier:nextViewIdentifier];
+}
+
+- (void)showSettings
+{
+    [self.router showContentWithIdentifier:@"Settings"];
 }
 
 #pragma mark - Методы RDRootInteractorOutput

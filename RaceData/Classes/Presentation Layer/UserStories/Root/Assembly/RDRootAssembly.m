@@ -67,6 +67,7 @@
 
 - (NSDictionary *)content
 {
-    return @{ @"Speedometer" : [self.speedometerAssembly speedometerContent] };
+    return @{ @"Speedometer": [self.speedometerAssembly speedometerContent],
+              @"RaceInfo"   : [self.raceInfoAssembly raceInfoContent] };
 }
 @end

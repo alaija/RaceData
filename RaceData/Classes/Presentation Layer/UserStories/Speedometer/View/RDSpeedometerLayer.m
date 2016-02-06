@@ -59,7 +59,7 @@
 {
     UIGraphicsPushContext(ctx);
     [RDStyleKit drawDayModeSpeedometerWithFrame2:(CGRect){ CGPointZero, self.frame.size}
-                                      fillColor:[UIColor blackColor]
+                                      fillColor:[UIColor whiteColor]
                                        pressure:self.pressure];
     UIGraphicsPopContext();
 }

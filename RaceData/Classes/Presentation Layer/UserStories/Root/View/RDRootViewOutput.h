@@ -17,4 +17,7 @@
  */
 - (void)didTriggerViewReadyEvent;
 
+- (void)navigateFromViewWithIdentifier:(NSString *)identifier;
+- (void)showSettings;
+
 @end

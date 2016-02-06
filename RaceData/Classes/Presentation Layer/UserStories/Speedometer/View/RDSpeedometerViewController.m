@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
+    [self setRestorationIdentifier:@"Speedometer"];
+    
 	[self.output didTriggerViewReadyEvent];
 }
 

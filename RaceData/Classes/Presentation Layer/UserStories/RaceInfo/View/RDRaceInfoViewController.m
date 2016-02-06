@@ -71,7 +71,9 @@
 	[super viewDidLoad];
     _timeFormater = [[NSDateFormatter alloc] init];
     [_timeFormater setDateFormat:@"HH:mm:ss.S"];
-
+    
+    [self setRestorationIdentifier:@"RaceInfo"];
+    
 	[self.output didTriggerViewReadyEvent];
 }
 
@@ -83,7 +85,10 @@
     [self setupSpeedLabel];
     [self setupTimeLabels];
     self.shouldUpdateTime = NO;
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    self.speedTimeLabel.textColor = [UIColor whiteColor];
+    self.motionTimeLabel.textColor = [UIColor whiteColor];
+    self.speedLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)setupReadyToStartState
@@ -92,7 +97,6 @@
     self.motionTimeLabel.text = @"";
     
     self.speedLabel.text = @"Tap to start";
-    self.view.backgroundColor = [UIColor yellowColor];
     
     [self.view bk_whenTapped:^{
         if (_started)
@@ -108,18 +112,17 @@
 
 - (void)setupRaceState
 {
-    self.shouldUpdateTime = YES;
     self.speedLabel.text = @"0.0 km/h";
-    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)updateSpeed:(CGFloat)speed
 {
-    if (_shouldUpdateTime) {
-        [self updateSpeedStartTime];
-    }
-    
     if (_started) {
+        if (_shouldUpdateTime && speed > 0) {
+            [self updateSpeedStartTime];
+        } else if (speed == 0) {
+            _shouldUpdateTime = YES;
+        }
         self.speedLabel.text = [NSString stringWithFormat:@"%.1f km/h", speed];
     }
 }
@@ -127,6 +130,18 @@
 - (void)updateMotionStartTime
 {
     _motionTimeLabel.text = [NSString stringWithFormat:@"Motion start: %@", [_timeFormater stringFromDate:[NSDate date]]];
+}
+
+#pragma mark - Методы RDRootContent
+
+- (UIViewController *)viewController
+{
+    return self;
+}
+
+- (BOOL)canBeHudded
+{
+    return NO;
 }
 
 @end

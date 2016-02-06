@@ -105,18 +105,18 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         && fabs(ageInSeconds) <= 1) {
         
         if (newLocation.horizontalAccuracy <= 5) {
-            _signalQuality = GPSSignalQualityBest;
+            self.signalQuality = GPSSignalQualityBest;
         } else if (newLocation.horizontalAccuracy <= 10) {
-            _signalQuality = GPSSignalQualityHigh;
+            self.signalQuality = GPSSignalQualityHigh;
         } else if (newLocation.horizontalAccuracy <= 25) {
-            _signalQuality = GPSSignalQualityNormal;
+            self.signalQuality = GPSSignalQualityNormal;
         } else {
-            _signalQuality = GPSSignalQualityLow;
+            self.signalQuality = GPSSignalQualityLow;
         }
         
         [self handleNewLocation:newLocation];
     } else {
-        _signalQuality = GPSSignalQualityUnknown;
+        self.signalQuality = GPSSignalQualityUnknown;
     }
     
     _locationPingTimer = [NSTimer timerWithTimeInterval:0.2

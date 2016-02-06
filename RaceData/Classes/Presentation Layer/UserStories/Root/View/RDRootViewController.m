@@ -24,16 +24,28 @@
 - (void)toogleHudded
 {
     if (_hudded) {
-        self.view.transform = CGAffineTransformMakeScale(1., 1.);
+        self.contentContainerView.transform = CGAffineTransformMakeScale(1., 1.);
     } else {
-        self.view.transform = CGAffineTransformMakeScale(1., -1.);
+        self.contentContainerView.transform = CGAffineTransformMakeScale(1., -1.);
     }
     _hudded = !_hudded;
+    [UIViewController attemptRotationToDeviceOrientation];
 }
 
--(UIInterfaceOrientationMask)supportedInterfaceOrientations
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return !_hudded;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)configureAsHUDButton:(UIButton *)button
@@ -42,8 +54,64 @@
         [button setTitle:@"HUD" forState:UIControlStateNormal];
         [button removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
         [button addTarget:self action:@selector(toogleHudded) forControlEvents:UIControlEventTouchUpInside];
+        button.hidden = NO;
     }
 }
+
+- (void)configureAsNavigationButton:(UIButton *)button withIdentifier:(NSString *)identifier
+{
+    if (button && identifier.length > 0) {
+        [button setImage:[UIImage imageNamed:([identifier
+                                               isEqualToString:@"Speedometer"]
+                                              ? @"race"
+                                              : @"speedometer")]
+                forState:UIControlStateNormal];
+        
+        [button removeTarget:nil action:NULL
+            forControlEvents:UIControlEventAllEvents];
+        
+        [button addTarget:self action:@selector(leftNavigationAcction:)
+         forControlEvents:UIControlEventTouchUpInside];
+        button.hidden = NO;
+    }
+}
+
+- (void)configureButton:(UIButton *)button withSourceButton:(UIButton *)sourceButton
+{
+    if (button && sourceButton) {
+        [button removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+        
+        NSString *actionSelector = [[sourceButton actionsForTarget:self.currentContentViewController
+                                                   forControlEvent:UIControlEventTouchUpInside] firstObject];
+        
+        [button addTarget:self.currentContentViewController
+                   action:NSSelectorFromString(actionSelector)
+         forControlEvents:UIControlEventTouchUpInside];
+        
+        [button setTitle:[sourceButton titleForState:UIControlStateNormal] forState:UIControlStateNormal];
+        [button setTitle:[sourceButton titleForState:UIControlStateSelected] forState:UIControlStateSelected];
+        [button setTitle:[sourceButton titleForState:UIControlStateHighlighted] forState:UIControlStateHighlighted];
+        [button setTitle:[sourceButton titleForState:UIControlStateDisabled] forState:UIControlStateDisabled];
+        
+        [button setImage:[sourceButton imageForState:UIControlStateNormal] forState:UIControlStateNormal];
+        [button setImage:[sourceButton imageForState:UIControlStateSelected] forState:UIControlStateSelected];
+        [button setImage:[sourceButton imageForState:UIControlStateHighlighted] forState:UIControlStateHighlighted];
+        [button setImage:[sourceButton imageForState:UIControlStateDisabled] forState:UIControlStateDisabled];
+        
+        button.hidden = NO;
+    }
+}
+
+- (IBAction)leftNavigationAcction:(id)sender
+{
+    [self.output navigateFromViewWithIdentifier:self.currentContentViewController.restorationIdentifier];
+}
+
+- (IBAction)rightNavigationAcction:(id)sender
+{
+    [self.output showSettings];
+}
+
 
 #pragma mark - Методы жизненного цикла
 
@@ -59,6 +127,7 @@
 - (void)setupInitialState
 {
 	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
+    [self.leftNavigationButton setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 #pragma mark - Методы RDRootCOntentEmbeder
@@ -81,20 +150,14 @@
     self.currentContentViewController = controller;
     [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
-    if ([content respondsToSelector:@selector(leftNavigationButton)]) {
-        self.leftNavigationButton = [content leftNavigationButton];
-    } else {
-        self.leftNavigationButton = nil;
-    }
-    
-    if ([content respondsToSelector:@selector(rightNavigationButton)]) {
-        self.rightNavigationButton = [content rightNavigationButton];
-    } else {
-        self.rightNavigationButton = nil;
-    }
+
+    [self configureAsNavigationButton:self.leftNavigationButton withIdentifier:controller.restorationIdentifier];
+
+    self.rightNavigationButton.hidden = YES;
     
     if ([content respondsToSelector:@selector(leftActionButton)]) {
-        self.leftActionButton = [content leftActionButton];
+        [self configureButton:self.leftActionButton
+             withSourceButton:[content leftActionButton]];
     } else if (contentCanBeHudded) {
         [self configureAsHUDButton:self.leftActionButton];;
     } else {
@@ -102,11 +165,11 @@
     }
     
     if ([content respondsToSelector:@selector(rightActionButton)]) {
-        self.rightActionButton = [content rightActionButton];
+        [self configureButton:self.rightActionButton
+             withSourceButton:[content rightActionButton]];
     } else {
-        self.rightActionButton = nil;
+        self.rightActionButton.hidden = YES;
     }
-    
 }
 
 @end

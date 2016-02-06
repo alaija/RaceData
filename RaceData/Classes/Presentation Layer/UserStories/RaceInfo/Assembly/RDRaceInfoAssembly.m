@@ -65,4 +65,9 @@
     return [TyphoonDefinition withClass:[CMMotionManager class]];
 }
 
+-(id<RDRootContent>)raceInfoContent
+{
+    return [self viewRaceInfoModule];
+}
+
 @end

@@ -9,11 +9,14 @@
 #import "ModuleAssemblyBase.h"
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
+@protocol RDRootContent;
 /**
  @author alaija
 
  RaceInfo module
  */
 @interface RDRaceInfoAssembly : ModuleAssemblyBase <RamblerInitialAssembly>
+
+- (id<RDRootContent>)raceInfoContent;
 
 @end

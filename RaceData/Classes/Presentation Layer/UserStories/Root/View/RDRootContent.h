@@ -14,8 +14,6 @@
 
 @optional
 
-- (UIButton *)leftNavigationButton;
-- (UIButton *)rightNavigationButton;
 - (UIButton *)leftActionButton;
 - (UIButton *)rightActionButton;
 

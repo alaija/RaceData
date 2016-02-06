@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "RDRaceInfoViewInput.h"
+#import "RDRootContent.h"
 
 @protocol RDRaceInfoViewOutput;
 
-@interface RDRaceInfoViewController : UIViewController <RDRaceInfoViewInput>
+@interface RDRaceInfoViewController : UIViewController <RDRaceInfoViewInput, RDRootContent>
 
 @property (nonatomic, strong) id<RDRaceInfoViewOutput> output;
 
