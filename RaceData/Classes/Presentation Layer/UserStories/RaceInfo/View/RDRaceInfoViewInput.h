@@ -22,4 +22,5 @@
 
 - (void)updateSpeed:(CGFloat)speed;
 - (void)updateMotionStartTime;
+
 @end

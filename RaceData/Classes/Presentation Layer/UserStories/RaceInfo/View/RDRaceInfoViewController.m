@@ -18,10 +18,15 @@
 
 @property (nonatomic, strong) UILabel *speedLabel;
 @property (nonatomic, strong) UILabel *speedTimeLabel;
+@property (nonatomic, strong) UILabel *speed30Label;
+@property (nonatomic, strong) UILabel *speed60Label;
+@property (nonatomic, strong) UILabel *speed100Label;
 @property (nonatomic, strong) UILabel *motionTimeLabel;
 
 @property (nonatomic) BOOL started;
 @property (nonatomic) BOOL shouldUpdateTime;
+
+@property (nonatomic) NSDate *startTime;
 
 @end
 
@@ -31,7 +36,8 @@
 
 - (void)updateSpeedStartTime
 {
-    _speedTimeLabel.text = [NSString stringWithFormat:@"Speed start: %@", [_timeFormater stringFromDate:[NSDate date]]];
+    _startTime = _startTime ?: [NSDate date];
+    _speedTimeLabel.text = [NSString stringWithFormat:@"Speed start: %@", [_timeFormater stringFromDate:_startTime]];
     _shouldUpdateTime = NO;
 }
 
@@ -52,6 +58,15 @@
 {
     _speedTimeLabel = [UILabel new];
     [self.view addSubview:_speedTimeLabel];
+    
+    _speed30Label = [UILabel new];
+    [self.view addSubview:_speed30Label];
+    
+    _speed60Label = [UILabel new];
+    [self.view addSubview:_speed60Label];
+    
+    _speed100Label = [UILabel new];
+    [self.view addSubview:_speed100Label];
     
     _motionTimeLabel = [UILabel new];
     [self.view addSubview:_motionTimeLabel];
@@ -89,14 +104,20 @@
     self.speedTimeLabel.textColor = [UIColor whiteColor];
     self.motionTimeLabel.textColor = [UIColor whiteColor];
     self.speedLabel.textColor = [UIColor whiteColor];
+    self.speed30Label.textColor = [UIColor whiteColor];
+    self.speed60Label.textColor = [UIColor whiteColor];
+    self.speed100Label.textColor = [UIColor whiteColor];
 }
 
 - (void)setupReadyToStartState
 {
     self.speedTimeLabel.text = @"";
     self.motionTimeLabel.text = @"";
-    
+    self.speed30Label.text = @"";
+    self.speed60Label.text = @"";
+    self.speed100Label.text = @"";
     self.speedLabel.text = @"Tap to start";
+    _startTime = nil;
     
     [self.view bk_whenTapped:^{
         if (_started)
@@ -122,13 +143,23 @@
             [self updateSpeedStartTime];
         } else if (speed == 0) {
             _shouldUpdateTime = YES;
+        } else if (!_shouldUpdateTime && _startTime) {
+            if (speed >= 30 && self.speed30Label.text.length == 0) {
+                self.speed30Label.text = [NSString stringWithFormat:@"0-%.2f: %f", speed, [[NSDate date] timeIntervalSinceDate:_startTime]];
+            } else if (speed >= 60 && self.speed60Label.text.length == 0) {
+                self.speed60Label.text = [NSString stringWithFormat:@"0-%.2f: %f", speed, [[NSDate date] timeIntervalSinceDate:_startTime]];
+            } else if (speed >= 100 && self.speed100Label.text.length == 0) {
+                self.speed100Label.text = [NSString stringWithFormat:@"0-%.2f: %f", speed, [[NSDate date] timeIntervalSinceDate:_startTime]];
+            }
         }
+        
         self.speedLabel.text = [NSString stringWithFormat:@"%.1f km/h", speed];
     }
 }
 
 - (void)updateMotionStartTime
 {
+    _startTime = _startTime ?: [NSDate date];
     _motionTimeLabel.text = [NSString stringWithFormat:@"Motion start: %@", [_timeFormater stringFromDate:[NSDate date]]];
 }
 
