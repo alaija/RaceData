@@ -76,6 +76,12 @@
         [self.speedTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:40.];
         [self.motionTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
         [self.motionTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20.];
+        [self.speed30Label autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.speed30Label autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.speedLabel withOffset:10.];
+        [self.speed60Label autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.speed60Label autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.speed30Label withOffset:10.];
+        [self.speed100Label autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.speed100Label autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.speed60Label withOffset:10.];
     }];
 }
 
