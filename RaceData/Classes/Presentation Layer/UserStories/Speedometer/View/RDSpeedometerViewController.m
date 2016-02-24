@@ -45,8 +45,8 @@
     [NSLayoutConstraint autoCreateAndInstallConstraints:^{
         [self.speedometer autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view withOffset:40 relation:NSLayoutRelationGreaterThanOrEqual];
         
-        [self.speedometer autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.speedometer withMultiplier:.87];
-        [[self.speedometer autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-20.] setPriority:UILayoutPriorityDefaultLow];
+        [self.speedometer autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.speedometer withMultiplier:.91];
+        [self.speedometer autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-20. relation:NSLayoutRelationLessThanOrEqual];
         [self.speedometer autoCenterInSuperview];
     }];
     [self.speedometer setSpeed:0];

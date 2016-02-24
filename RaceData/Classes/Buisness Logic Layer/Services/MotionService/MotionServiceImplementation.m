@@ -18,6 +18,17 @@
 
 @implementation MotionServiceImplementation
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _motionManager = [CMMotionManager new];
+        _motionManager.accelerometerUpdateInterval = 0.01;
+    }
+    return self;
+}
+
+
 - (void)handleMotionData:(CMAcceleration)acceleration
 {
     self.currentAcceleration = sqrt((pow(acceleration.x, 2) + pow(acceleration.y, 2) + pow(acceleration.z, 2)));

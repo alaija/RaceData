@@ -56,6 +56,8 @@
 		F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31901C416F7C007DC313 /* MotionServiceImplementation.m */; };
 		F51A31941C417570007DC313 /* RDSpeedometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31931C417570007DC313 /* RDSpeedometerView.m */; };
 		F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */; };
+		F526B7C21C7D853F007B7C2C /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */; };
+		F526B7C51C7D8915007B7C2C /* RDSpeedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */; };
 		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
 		F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */; };
 		F58FE7C51C1C66980098D8CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C41C1C66980098D8CE /* main.m */; };
@@ -188,6 +190,10 @@
 		F51A31931C417570007DC313 /* RDSpeedometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerView.m; sourceTree = "<group>"; };
 		F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerLayer.h; sourceTree = "<group>"; };
 		F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerLayer.m; sourceTree = "<group>"; };
+		F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Cond.otf"; path = "../Supporting Files/MyriadPro-Cond.otf"; sourceTree = "<group>"; };
+		F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Cond.otf"; path = "RaceData/Supporting Files/MyriadPro-Cond.otf"; sourceTree = "<group>"; };
+		F526B7C31C7D8915007B7C2C /* RDSpeedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSpeedLabel.h; path = RaceData/Classes/UIKIt/RDSpeedLabel.h; sourceTree = SOURCE_ROOT; };
+		F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSpeedLabel.m; path = RaceData/Classes/UIKIt/RDSpeedLabel.m; sourceTree = SOURCE_ROOT; };
 		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F58FE7C01C1C66980098D8CE /* RaceData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -773,9 +779,19 @@
 			name = Assemblies;
 			sourceTree = "<group>";
 		};
+		F526B7C61C7D8921007B7C2C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F526B7C31C7D8915007B7C2C /* RDSpeedLabel.h */,
+				F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		F54520C51C1C806500F795F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */,
 				F54520CA1C1C832500F795F1 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -794,6 +810,7 @@
 		F54520C71C1C80CB00F795F1 /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
+				F526B7C61C7D8921007B7C2C /* UIKit */,
 				F58FE7C61C1C66980098D8CE /* AppDelegate.h */,
 				F58FE7C71C1C66980098D8CE /* AppDelegate.m */,
 			);
@@ -826,6 +843,7 @@
 		F58FE7B71C1C66980098D8CE = {
 			isa = PBXGroup;
 			children = (
+				F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */,
 				40109186164569D1B87D48AF /* Frameworks */,
 				437C8278B06F3D469FDA654C /* Pods */,
 				F58FE7C11C1C66980098D8CE /* Products */,
@@ -971,6 +989,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F526B7C21C7D853F007B7C2C /* MyriadPro-Cond.otf in Resources */,
 				F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */,
 				F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */,
 				F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */,
@@ -1106,6 +1125,7 @@
 				8458D245B57B7556E840AFDB /* RDRootAssembly.m in Sources */,
 				9A97C9BCA08DBE3D6C1B9B23 /* RDRootViewController.m in Sources */,
 				CF53D024D78C9FD8F1346586 /* RDRootPresenter.m in Sources */,
+				F526B7C51C7D8915007B7C2C /* RDSpeedLabel.m in Sources */,
 				9322273C1CB4B99B4EEDBA56 /* RDRootInteractor.m in Sources */,
 				C58A4217A50325842D69AC3F /* RDRootRouter.m in Sources */,
 				827FB55CC91892C4C8779A54 /* RDGPSAssembly.m in Sources */,
