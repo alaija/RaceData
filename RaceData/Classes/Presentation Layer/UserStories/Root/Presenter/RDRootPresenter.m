@@ -25,6 +25,7 @@
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
     [self.router showContentWithIdentifier:@"Speedometer"];
+    [self.router showGpsView];
 }
 
 - (void)navigateFromViewWithIdentifier:(NSString *)identifier

@@ -16,6 +16,6 @@
  Метод настраивает начальный стейт view
  */
 - (void)setupInitialState;
-- (void)updateSignalQualityLevel:(CGFloat)level;
+- (void)updateSignalQualityLevel:(NSUInteger)level;
 
 @end

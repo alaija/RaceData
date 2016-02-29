@@ -11,5 +11,6 @@
 @protocol RDRootRouterInput <NSObject>
 
 - (void)showContentWithIdentifier:(NSString *)identifier;
+- (void)showGpsView;
 
 @end

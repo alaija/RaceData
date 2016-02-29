@@ -65,6 +65,7 @@
 		F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7CC1C1C66980098D8CE /* Main.storyboard */; };
 		F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */; };
 		F58FE7DE1C1C66980098D8CE /* RaceDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */; };
+		F5EDF4111C84183B008D71B3 /* UILabel+RDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,8 @@
 		F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaceDataTests.m; sourceTree = "<group>"; };
 		F58FE7DF1C1C66980098D8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C790EA1C5F3EDF000E2255 /* RDEmbeddedContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDEmbeddedContent.h; sourceTree = "<group>"; };
+		F5EDF40F1C84183B008D71B3 /* UILabel+RDLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+RDLabel.h"; path = "Categories/UILabel+RDLabel.h"; sourceTree = "<group>"; };
+		F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+RDLabel.m"; path = "Categories/UILabel+RDLabel.m"; sourceTree = "<group>"; };
 		FF4650E940B36242D7ABFAA5 /* RDSpeedometerAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSpeedometerAssembly_Testable.h; path = Speedometer/Assembly/RDSpeedometerAssembly_Testable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -813,6 +816,8 @@
 				F526B7C61C7D8921007B7C2C /* UIKit */,
 				F58FE7C61C1C66980098D8CE /* AppDelegate.h */,
 				F58FE7C71C1C66980098D8CE /* AppDelegate.m */,
+				F5EDF40F1C84183B008D71B3 /* UILabel+RDLabel.h */,
+				F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */,
 			);
 			path = "Application Layer";
 			sourceTree = "<group>";
@@ -1119,6 +1124,7 @@
 				9D81F7CACD53AABD6100D1D2 /* RDSpeedometerViewController.m in Sources */,
 				F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */,
 				C6242F4130CC5EF156E62441 /* RDSpeedometerPresenter.m in Sources */,
+				F5EDF4111C84183B008D71B3 /* UILabel+RDLabel.m in Sources */,
 				F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */,
 				00EF6E3ECEDEEFAD5F30BBC3 /* RDSpeedometerInteractor.m in Sources */,
 				48CE9D69967FE1A0D8A11163 /* RDSpeedometerRouter.m in Sources */,

@@ -13,5 +13,6 @@
 @protocol RDRootContentEmbedder <NSObject>
 
 - (void)embedContent:(id<RDRootContent>)content;
+- (void)embedGPS:(id<RDRootContent>)content;
 
 @end

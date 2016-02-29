@@ -33,6 +33,6 @@
 
 - (void)signalQualityChanged:(NSUInteger)level
 {
-    
+    [self.view updateSignalQualityLevel:level];
 }
 @end

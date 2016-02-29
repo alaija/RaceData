@@ -51,17 +51,17 @@
                                 <rect key="frame" x="534" y="550" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-OA-PC6">
-                                <rect key="frame" x="10" y="506" width="77" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="diP-JD-VK9"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="diP-JD-VK9"/>
-                                    </mask>
-                                </variation>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-OA-PC6">
+                                <rect key="frame" x="10" y="556" width="30" height="34"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-pI-Vjg" userLabel="GPSView">
+                                <rect key="frame" x="175" y="0.0" width="250" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3vn-dE-9ek"/>
+                                    <constraint firstAttribute="height" constant="80" id="fig-qd-1ZZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,16 +72,19 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awe-1j-vZf" secondAttribute="bottom" constant="20" id="JLj-bq-zW1"/>
                             <constraint firstAttribute="trailing" secondItem="Awe-1j-vZf" secondAttribute="trailing" constant="20" id="NbA-jV-1m8"/>
                             <constraint firstAttribute="trailing" secondItem="pFK-Uj-fOv" secondAttribute="trailing" id="SeT-oP-LU1"/>
+                            <constraint firstItem="tWn-pI-Vjg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cQa-mw-qAd"/>
                             <constraint firstItem="lo6-8M-Zxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gqi-eJ-iZr"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hO5-lF-BfA"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mdl-04-4n6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyG-OA-PC6" secondAttribute="bottom" constant="10" id="rCF-fY-pLP"/>
                             <constraint firstItem="wjd-zR-TXR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ssN-F7-aPx"/>
+                            <constraint firstItem="tWn-pI-Vjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMu-tz-6rA"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="contentContainerView" destination="pFK-Uj-fOv" id="lqR-Gx-2yJ"/>
+                        <outlet property="gpsView" destination="tWn-pI-Vjg" id="adM-Lu-8Pi"/>
                         <outlet property="leftActionButton" destination="wjd-zR-TXR" id="8Zb-D9-43w"/>
                         <outlet property="leftNavigationButton" destination="xyG-OA-PC6" id="FfI-Y8-YgP"/>
                         <outlet property="rightActionButton" destination="lo6-8M-Zxd" id="CLC-Yg-t2v"/>

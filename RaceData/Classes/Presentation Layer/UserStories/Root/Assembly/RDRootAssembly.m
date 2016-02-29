@@ -17,9 +17,11 @@
 
 #import "RDSpeedometerAssembly.h"
 #import "RDRaceInfoAssembly.h"
+#import "RDGPSAssembly.h"
 
 @interface RDRootAssembly()
 @property (nonatomic, strong, readonly) RDSpeedometerAssembly *speedometerAssembly;
+@property (nonatomic, strong, readonly) RDGPSAssembly *gpsAssembly;
 @property (nonatomic, strong, readonly) RDRaceInfoAssembly *raceInfoAssembly;
 @end
 
@@ -68,6 +70,7 @@
 - (NSDictionary *)content
 {
     return @{ @"Speedometer": [self.speedometerAssembly speedometerContent],
-              @"RaceInfo"   : [self.raceInfoAssembly raceInfoContent] };
+              @"RaceInfo"   : [self.raceInfoAssembly raceInfoContent],
+              @"GPS"        : [self.gpsAssembly gpsContent] };
 }
 @end

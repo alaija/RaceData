@@ -21,4 +21,11 @@
     [self.rootContentEmbeder embedContent:content];
 }
 
+- (void)showGpsView
+{
+    id <RDRootContent> content = self.contentFactory[@"GPS"];
+    
+    [self.rootContentEmbeder embedGPS:content];
+}
+
 @end

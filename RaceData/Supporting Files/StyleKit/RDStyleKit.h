@@ -11,7 +11,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 @interface RDStyleKit : NSObject
 
 // Drawing Methods

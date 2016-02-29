@@ -18,6 +18,7 @@
 @property (nonatomic, strong) id<RDRootViewOutput> output;
 
 @property (weak, nonatomic) IBOutlet UIView *contentContainerView;
+@property (weak, nonatomic) IBOutlet UIView *gpsView;
 
 @property (weak, nonatomic) IBOutlet UIButton *leftNavigationButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightNavigationButton;

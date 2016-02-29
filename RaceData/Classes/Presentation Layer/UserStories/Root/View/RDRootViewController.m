@@ -16,6 +16,7 @@
 
 @property (nonatomic) BOOL hudded;
 @property (nonatomic, strong) UIViewController *currentContentViewController;
+@property (nonatomic, strong) UIViewController *gpsViewController;
 @property (nonatomic, strong) UIButton *hudButton;
 @end
 
@@ -170,6 +171,20 @@
     } else {
         self.rightActionButton.hidden = YES;
     }
+}
+
+- (void)embedGPS:(id<RDRootContent>)content
+{
+    if (self.gpsViewController != nil) {
+        [self.gpsViewController.view removeFromSuperview];
+        [self.gpsViewController removeFromParentViewController];
+    }
+    
+    UIViewController *controller = [content viewController];
+    [self addChildViewController:controller];
+    [self.gpsView addSubview:controller.view];
+    self.gpsViewController = controller;
+    [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 }
 
 @end

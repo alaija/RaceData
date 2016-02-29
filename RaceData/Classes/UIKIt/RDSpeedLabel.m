@@ -22,10 +22,10 @@
     if (self) {
         self.font = [UIFont fontWithName:@"MyriadPro-Cond" size:size];
         self.textColor = [UIColor colorWithRed:0.88 green:0.86 blue:1 alpha:1];
-        self.layer.shadowColor = [UIColor redColor].CGColor;
-        self.layer.shadowOffset = CGSizeMake(0., 0.);
-        self.layer.shadowRadius = 10;
-        self.layer.shadowOpacity = 1.;
+//        self.layer.shadowColor = [UIColor redColor].CGColor;
+//        self.layer.shadowOffset = CGSizeMake(0., 0.);
+//        self.layer.shadowRadius = 10;
+//        self.layer.shadowOpacity = 1.;
     }
     
     return self;
