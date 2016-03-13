@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="MyriadPro-Cond.otf">
@@ -29,6 +29,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-pI-Vjg" userLabel="GPSView">
+                                        <rect key="frame" x="175" y="0.0" width="250" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="3vn-dE-9ek"/>
+                                            <constraint firstAttribute="height" constant="80" id="fig-qd-1ZZ"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -36,6 +44,8 @@
                                     <constraint firstAttribute="bottom" secondItem="4dF-qB-iLU" secondAttribute="bottom" id="5yQ-zc-uNs"/>
                                     <constraint firstAttribute="trailing" secondItem="4dF-qB-iLU" secondAttribute="trailing" id="e17-f5-D8e"/>
                                     <constraint firstItem="4dF-qB-iLU" firstAttribute="leading" secondItem="pFK-Uj-fOv" secondAttribute="leading" id="giU-d2-7fV"/>
+                                    <constraint firstItem="tWn-pI-Vjg" firstAttribute="centerX" secondItem="pFK-Uj-fOv" secondAttribute="centerX" id="moJ-C4-aSE"/>
+                                    <constraint firstItem="tWn-pI-Vjg" firstAttribute="top" secondItem="pFK-Uj-fOv" secondAttribute="top" id="v50-Pa-V8K"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-8M-Zxd">
@@ -54,14 +64,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-OA-PC6">
                                 <rect key="frame" x="10" y="556" width="30" height="34"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-pI-Vjg" userLabel="GPSView">
-                                <rect key="frame" x="175" y="0.0" width="250" height="80"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="3vn-dE-9ek"/>
-                                    <constraint firstAttribute="height" constant="80" id="fig-qd-1ZZ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,13 +74,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awe-1j-vZf" secondAttribute="bottom" constant="20" id="JLj-bq-zW1"/>
                             <constraint firstAttribute="trailing" secondItem="Awe-1j-vZf" secondAttribute="trailing" constant="20" id="NbA-jV-1m8"/>
                             <constraint firstAttribute="trailing" secondItem="pFK-Uj-fOv" secondAttribute="trailing" id="SeT-oP-LU1"/>
-                            <constraint firstItem="tWn-pI-Vjg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cQa-mw-qAd"/>
                             <constraint firstItem="lo6-8M-Zxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gqi-eJ-iZr"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hO5-lF-BfA"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mdl-04-4n6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyG-OA-PC6" secondAttribute="bottom" constant="10" id="rCF-fY-pLP"/>
                             <constraint firstItem="wjd-zR-TXR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ssN-F7-aPx"/>
-                            <constraint firstItem="tWn-pI-Vjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMu-tz-6rA"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

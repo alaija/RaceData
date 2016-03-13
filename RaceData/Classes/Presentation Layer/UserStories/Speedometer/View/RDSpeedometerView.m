@@ -20,22 +20,13 @@
 
 @property (nonatomic, strong) UILabel *mesureLabel;
 
+@property (nonatomic, strong) NSArray <RDSpeedLabel *> *speedIndicators;
+
 @property (nonatomic, strong) RDSpeedLabel *speedLabel;
-@property (nonatomic, strong) RDSpeedLabel *speed0;
-@property (nonatomic, strong) RDSpeedLabel *speed20;
-@property (nonatomic, strong) RDSpeedLabel *speed40;
-@property (nonatomic, strong) RDSpeedLabel *speed60;
-@property (nonatomic, strong) RDSpeedLabel *speed80;
-@property (nonatomic, strong) RDSpeedLabel *speed100;
-@property (nonatomic, strong) RDSpeedLabel *speed120;
-@property (nonatomic, strong) RDSpeedLabel *speed140;
-@property (nonatomic, strong) RDSpeedLabel *speed160;
-@property (nonatomic, strong) RDSpeedLabel *speed180;
-@property (nonatomic, strong) RDSpeedLabel *speed220;
-@property (nonatomic, strong) RDSpeedLabel *speed260;
-@property (nonatomic, strong) RDSpeedLabel *speed300;
 
 @property (nonatomic) CGFloat angle;
+@property (nonatomic) NSUInteger selectedIndex;
+
 @end
 
 @implementation RDSpeedometerView
@@ -66,50 +57,45 @@
     _mesureLabel.text = @"КМ/Ч";
     _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:120.];
     [_speedLabel setText:@"0"];
-    _speed0 = [RDSpeedLabel new];
-    [_speed0 setText:@"0"];
-    _speed20 = [RDSpeedLabel new];
-    [_speed20 setText:@"20"];
-    _speed40 = [RDSpeedLabel new];
-    [_speed40 setText:@"40"];
-    _speed60 = [RDSpeedLabel new];
-    [_speed60 setText:@"60"];
-    _speed80 = [RDSpeedLabel new];
-    [_speed80 setText:@"80"];
-    _speed100 = [RDSpeedLabel new];
-    [_speed100 setText:@"100"];
-    _speed120 = [RDSpeedLabel new];
-    [_speed120 setText:@"120"];
-    _speed140 = [RDSpeedLabel new];
-    [_speed140 setText:@"140"];
-    _speed160 = [RDSpeedLabel new];
-    [_speed160 setText:@"160"];
-    _speed180 = [RDSpeedLabel new];
-    [_speed180 setText:@"180"];
-    _speed220 = [RDSpeedLabel new];
-    [_speed220 setText:@"220"];
-    _speed260 = [RDSpeedLabel new];
-    [_speed260 setText:@"260"];
-    _speed300 = [RDSpeedLabel new];
-    [_speed300 setText:@"300"];
+    
+    self.speedIndicators = @[ [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new],
+                              [RDSpeedLabel new] ];
+    
+    [self.speedIndicators[0] setText:@"0"];
+    [self.speedIndicators[1] setText:@"20"];
+    [self.speedIndicators[2] setText:@"40"];
+    [self.speedIndicators[3] setText:@"60"];
+    [self.speedIndicators[4] setText:@"80"];
+    [self.speedIndicators[5] setText:@"100"];
+    [self.speedIndicators[6] setText:@"120"];
+    [self.speedIndicators[7] setText:@"140"];
+    [self.speedIndicators[8] setText:@"160"];
+    [self.speedIndicators[9] setText:@"180"];
+    [self.speedIndicators[10] setText:@"220"];
+    [self.speedIndicators[11] setText:@"260"];
+    [self.speedIndicators[12] setText:@"300"];
+    
+    for (RDSpeedLabel *label in self.speedIndicators) {
+        [self addSubview:label];
+    }
     
     [self addSubview:_panelView];
     [self addSubview:_needleView];
     [self addSubview:_mesureLabel];
     [self addSubview:_speedLabel];
-    [self addSubview:_speed0];
-    [self addSubview:_speed20];
-    [self addSubview:_speed40];
-    [self addSubview:_speed60];
-    [self addSubview:_speed80];
-    [self addSubview:_speed100];
-    [self addSubview:_speed120];
-    [self addSubview:_speed140];
-    [self addSubview:_speed160];
-    [self addSubview:_speed180];
-    [self addSubview:_speed220];
-    [self addSubview:_speed260];
-    [self addSubview:_speed300];
+    
+    
     
     [NSLayoutConstraint autoSetIdentifier:@"Speedometer" forConstraints:^{
         [_panelView autoPinEdgesToSuperviewEdges];
@@ -118,35 +104,35 @@
         [_needleView autoAlignAxis:ALAxisVertical toSameAxisOfView:_panelView];
         [_needleView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_panelView withMultiplier:1.09];
         [_mesureLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        [_mesureLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_speedLabel withOffset:20.];
+        [_mesureLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_speedLabel withOffset:0.];
         [_speedLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
         [_speedLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_panelView withMultiplier:1.85];
-        [_speed0 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.48];
-        [_speed0 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.65];
-        [_speed20 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.34];
-        [_speed20 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.41];
-        [_speed40 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.28];
-        [_speed40 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.1];
-        [_speed60 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.34];
-        [_speed60 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.8];
-        [_speed80 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.49];
-        [_speed80 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.55];
-        [_speed100 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.71];
-        [_speed100 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.38];
-        [_speed120 autoAlignAxisToSuperviewAxis:ALAxisVertical];
-        [_speed120 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.32];
-        [_speed140 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.28];
-        [_speed140 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.38];
-        [_speed160 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.51];
-        [_speed160 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.55];
-        [_speed180 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.65];
-        [_speed180 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.8];
-        [_speed220 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.7];
-        [_speed220 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.1];
-        [_speed260 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.66];
-        [_speed260 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.41];
-        [_speed300 autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.5];
-        [_speed300 autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.65];
+        [self.speedIndicators[0] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.48];
+        [self.speedIndicators[0] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.65];
+        [self.speedIndicators[1] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.34];
+        [self.speedIndicators[1] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.41];
+        [self.speedIndicators[2] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.28];
+        [self.speedIndicators[2] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.1];
+        [self.speedIndicators[3] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.34];
+        [self.speedIndicators[3] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.8];
+        [self.speedIndicators[4] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.49];
+        [self.speedIndicators[4] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.55];
+        [self.speedIndicators[5] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:0.71];
+        [self.speedIndicators[5] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.38];
+        [self.speedIndicators[6] autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.speedIndicators[6] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.32];
+        [self.speedIndicators[7] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.28];
+        [self.speedIndicators[7] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.38];
+        [self.speedIndicators[8] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.51];
+        [self.speedIndicators[8] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.55];
+        [self.speedIndicators[9] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.65];
+        [self.speedIndicators[9] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:0.8];
+        [self.speedIndicators[10] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.7];
+        [self.speedIndicators[10] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.1];
+        [self.speedIndicators[11] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.66];
+        [self.speedIndicators[11] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.41];
+        [self.speedIndicators[12] autoAlignAxis:ALAxisVertical toSameAxisOfView:self withMultiplier:1.5];
+        [self.speedIndicators[12] autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self withMultiplier:1.65];
     }];
 }
 
@@ -196,15 +182,31 @@
 #pragma mark rotateNeedle Method
 -(void)rotateNeedle
 {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1.f];
-    [self rotateIt:self.angle];
-    [UIView commitAnimations];
+    [UIView animateWithDuration:1. animations:^{
+        [self rotateIt:self.angle];
+    } completion:^(BOOL finished) {
+        [self highlightSpeedAtAngle:self.angle];
+    }];
 }
 
 -(void)rotateIt:(CGFloat)angl
 {
     [self.needleView setTransform: CGAffineTransformMakeRotation((M_PI / 180) * angl)];
+
+}
+
+- (void)highlightSpeedAtAngle:(CGFloat)angl
+{
+    self.speedIndicators[_selectedIndex].highlighted = NO;
+    if (self.angle <= -125.) {
+        _selectedIndex = 0.;
+    } else if ( self.angle >= 125.) {
+        _selectedIndex = 12.;
+    } else {
+        _selectedIndex = (NSUInteger)round((angl + 136.)/22.5 - 0.065);
+    }
+    
+    self.speedIndicators[_selectedIndex].highlighted = YES;
 }
 
 

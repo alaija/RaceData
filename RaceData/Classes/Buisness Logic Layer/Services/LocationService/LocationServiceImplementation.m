@@ -117,9 +117,10 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
         [self handleNewLocation:newLocation];
     } else {
         self.signalQuality = GPSSignalQualityUnknown;
+        self.currentSpeed = 0;
     }
     
-    _locationPingTimer = [NSTimer timerWithTimeInterval:0.2
+    _locationPingTimer = [NSTimer timerWithTimeInterval:1.
                                                  target:self
                                                selector:@selector(requestNewLocation)
                                                userInfo:nil
