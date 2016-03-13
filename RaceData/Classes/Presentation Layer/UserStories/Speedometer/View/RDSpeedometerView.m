@@ -10,6 +10,7 @@
 #import "PureLayout.h"
 #import "RDSpeedLabel.h"
 #import "UILabel+RDLabel.h"
+#import "UIFont+RDFont.h"
 
 @interface RDSpeedometerView ()
 
@@ -55,7 +56,7 @@
     _mesureLabel = [UILabel new];
     [UILabel setupLabelAsDefault:_mesureLabel];
     _mesureLabel.text = @"КМ/Ч";
-    _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:120.];
+    _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:[UIFont bigFontSize]];
     [_speedLabel setText:@"0"];
     
     self.speedIndicators = @[ [RDSpeedLabel new],

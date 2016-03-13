@@ -49,6 +49,8 @@
 		DC927A50CB78E133DF5C8818 /* RDRaceInfoInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44643B1B4F7CB51662C395BC /* RDRaceInfoInteractorTests.m */; };
 		DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCB48953ABF330D4F2605FB /* RDRaceInfoInteractor.m */; };
 		E2F2A55872701FDA76513E05 /* RDGPSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C211C1A35C3F9A9D2DBC275 /* RDGPSViewControllerTests.m */; };
+		E77644621C95A7F900597644 /* UIFont+RDFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E77644611C95A7F900597644 /* UIFont+RDFont.m */; };
+		E77644651C95A87700597644 /* UIScreen+RDScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E77644641C95A87700597644 /* UIScreen+RDScreen.m */; };
 		F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A317A1C4112A2007DC313 /* RDStyleKit.m */; };
 		F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31821C4118E7007DC313 /* ServiceComponentsAssembly.m */; };
 		F51A31891C411C9B007DC313 /* LocationServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31881C411C9B007DC313 /* LocationServiceImplementation.m */; };
@@ -166,6 +168,10 @@
 		DF04FF0AE61DD37C892097AB /* RDRootAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootAssembly.h; sourceTree = "<group>"; };
 		DF60BBB3CB634DC0A03BBF38 /* RDRaceInfoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoViewController.m; sourceTree = "<group>"; };
 		DFA1E14FD003170927F6D4B3 /* RDRaceInfoRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDRaceInfoRouterTests.m; sourceTree = "<group>"; };
+		E77644601C95A7F900597644 /* UIFont+RDFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+RDFont.h"; path = "Categories/UIFont+RDFont.h"; sourceTree = "<group>"; };
+		E77644611C95A7F900597644 /* UIFont+RDFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+RDFont.m"; path = "Categories/UIFont+RDFont.m"; sourceTree = "<group>"; };
+		E77644631C95A87700597644 /* UIScreen+RDScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+RDScreen.h"; path = "Categories/UIScreen+RDScreen.h"; sourceTree = "<group>"; };
+		E77644641C95A87700597644 /* UIScreen+RDScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+RDScreen.m"; path = "Categories/UIScreen+RDScreen.m"; sourceTree = "<group>"; };
 		E90DB471B401B2962D05085D /* RDSpeedometerInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerInteractorOutput.h; sourceTree = "<group>"; };
 		EC510991228EF31EBE3A0E5B /* RDRootRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootRouter.h; sourceTree = "<group>"; };
 		F221D20EF0DAA75D75E49AA5 /* RDSpeedometerModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerModuleInput.h; sourceTree = "<group>"; };
@@ -818,6 +824,10 @@
 				F58FE7C71C1C66980098D8CE /* AppDelegate.m */,
 				F5EDF40F1C84183B008D71B3 /* UILabel+RDLabel.h */,
 				F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */,
+				E77644601C95A7F900597644 /* UIFont+RDFont.h */,
+				E77644611C95A7F900597644 /* UIFont+RDFont.m */,
+				E77644631C95A87700597644 /* UIScreen+RDScreen.h */,
+				E77644641C95A87700597644 /* UIScreen+RDScreen.m */,
 			);
 			path = "Application Layer";
 			sourceTree = "<group>";
@@ -1118,6 +1128,7 @@
 				DDA4A46AC6ABA7703163E531 /* RDRaceInfoInteractor.m in Sources */,
 				F51A31891C411C9B007DC313 /* LocationServiceImplementation.m in Sources */,
 				F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */,
+				E77644651C95A87700597644 /* UIScreen+RDScreen.m in Sources */,
 				53268D0D72936815D1F90016 /* RDRaceInfoRouter.m in Sources */,
 				C789C241A44036924D3E6794 /* RDSpeedometerAssembly.m in Sources */,
 				F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */,
@@ -1131,6 +1142,7 @@
 				8458D245B57B7556E840AFDB /* RDRootAssembly.m in Sources */,
 				9A97C9BCA08DBE3D6C1B9B23 /* RDRootViewController.m in Sources */,
 				CF53D024D78C9FD8F1346586 /* RDRootPresenter.m in Sources */,
+				E77644621C95A7F900597644 /* UIFont+RDFont.m in Sources */,
 				F526B7C51C7D8915007B7C2C /* RDSpeedLabel.m in Sources */,
 				9322273C1CB4B99B4EEDBA56 /* RDRootInteractor.m in Sources */,
 				C58A4217A50325842D69AC3F /* RDRootRouter.m in Sources */,

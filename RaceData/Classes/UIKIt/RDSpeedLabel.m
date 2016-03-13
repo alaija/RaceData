@@ -7,12 +7,13 @@
 //
 
 #import "RDSpeedLabel.h"
+#import "UIFont+RDFont.h"
 
 @implementation RDSpeedLabel
 
 - (instancetype)init
 {
-    return [self initWithTextSize:25];
+    return [self initWithTextSize:[UIFont defautFontSize]];
 }
 
 - (instancetype)initWithTextSize:(CGFloat)size
@@ -37,9 +38,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    CGRect oldRect = self.bounds;
-    self.layer.shadowPath = [UIBezierPath bezierPathWithOvalInRect:oldRect].CGPath;//CGRectInset(oldRect, -CGRectGetWidth(oldRect)*0.3/2, -CGRectGetHeight(oldRect)*0.3/2)].CGPath;
-    
+    self.layer.shadowPath = [UIBezierPath bezierPathWithOvalInRect:self.bounds].CGPath;
 }
 
 -(void)setHighlighted:(BOOL)highlighted

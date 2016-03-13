@@ -7,12 +7,13 @@
 //
 
 #import "UILabel+RDLabel.h"
+#import "UIFont+RDFont.h"
 
 @implementation UILabel (RDLabel)
 
 + (void) setupLabelAsDefault:(UILabel *)label
 {
-    label.font = [UIFont fontWithName:@"MyriadPro-Cond" size:25.];
+    label.font = [UIFont defaultFont];
     label.textColor = [UIColor colorWithRed:0.88 green:0.86 blue:1 alpha:1];
 }
 
