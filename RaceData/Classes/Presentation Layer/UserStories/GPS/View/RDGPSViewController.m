@@ -36,7 +36,7 @@
 - (void)setupInitialState {
 	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
     _gpsLabel = [UILabel new];
-    [UILabel setupLabelAsDefault:_gpsLabel];
+    [UILabel setupLabelAsLight :_gpsLabel];
     _gpsLabel.text = @"GPS";
     [self.view addSubview:_gpsLabel];
 

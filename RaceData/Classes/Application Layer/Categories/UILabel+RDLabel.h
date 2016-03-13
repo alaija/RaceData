@@ -10,6 +10,7 @@
 
 @interface UILabel (RDLabel)
 
-+ (void) setupLabelAsDefault:(UILabel *)label;
++ (void)setupLabelAsDefault:(UILabel *)label;
++ (void)setupLabelAsLight:(UILabel *)label;
 
 @end

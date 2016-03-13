@@ -11,10 +11,16 @@
 
 @implementation UILabel (RDLabel)
 
-+ (void) setupLabelAsDefault:(UILabel *)label
++ (void)setupLabelAsDefault:(UILabel *)label
 {
     label.font = [UIFont defaultFont];
     label.textColor = [UIColor colorWithRed:0.88 green:0.86 blue:1 alpha:1];
+}
+
++ (void)setupLabelAsLight:(UILabel *)label
+{
+    label.font = [UIFont defaultFont];
+    label.textColor = [UIColor colorWithRed:0.38 green:0.4 blue:0.53 alpha:1];
 }
 
 @end

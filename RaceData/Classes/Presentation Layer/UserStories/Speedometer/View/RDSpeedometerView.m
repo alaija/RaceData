@@ -91,11 +91,10 @@
         [self addSubview:label];
     }
     
-    [self addSubview:_panelView];
-    [self addSubview:_needleView];
     [self addSubview:_mesureLabel];
     [self addSubview:_speedLabel];
-    
+    [self addSubview:_panelView];
+    [self addSubview:_needleView];
     
     
     [NSLayoutConstraint autoSetIdentifier:@"Speedometer" forConstraints:^{

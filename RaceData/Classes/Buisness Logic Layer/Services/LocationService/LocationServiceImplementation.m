@@ -63,7 +63,7 @@ static CGFloat const LocationServiceImplementationKMPH = 3.6;
 - (void)handleNewLocation:(CLLocation *)location
 {
     self.currentSpeed = ((location.speed <= 0.
-                          && _signalQuality >= GPSSignalQualityNormal)
+                          || _signalQuality <= GPSSignalQualityNormal)
                          ? 0.
                          : location.speed * LocationServiceImplementationKMPH);
 }
