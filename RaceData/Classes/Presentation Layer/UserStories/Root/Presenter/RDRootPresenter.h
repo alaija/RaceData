@@ -9,6 +9,7 @@
 #import "RDRootViewOutput.h"
 #import "RDRootInteractorOutput.h"
 #import "RDRootModuleInput.h"
+#import "AnalyticsService.h"
 
 @protocol RDRootViewInput;
 @protocol RDRootInteractorInput;
@@ -19,5 +20,6 @@
 @property (nonatomic, weak) id<RDRootViewInput> view;
 @property (nonatomic, strong) id<RDRootInteractorInput> interactor;
 @property (nonatomic, strong) id<RDRootRouterInput> router;
+@property (nonatomic, strong) id<AnalyticsService> analyticsService;
 
 @end

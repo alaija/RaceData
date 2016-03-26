@@ -39,11 +39,15 @@
     }
     
     [self.router showContentWithIdentifier:nextViewIdentifier];
+    [self.analyticsService trackPageName:nextViewIdentifier];
 }
 
 - (void)showSettings
 {
+    NSString *nextViewIdentifier = @"Settings";
+    
     [self.router showContentWithIdentifier:@"Settings"];
+    [self.analyticsService trackPageName:nextViewIdentifier];
 }
 
 #pragma mark - Методы RDRootInteractorOutput

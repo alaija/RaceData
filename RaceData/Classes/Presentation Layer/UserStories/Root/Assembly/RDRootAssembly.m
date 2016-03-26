@@ -60,6 +60,8 @@
                                                     with:[self interactorRootModule]];
                               [definition injectProperty:@selector(router)
                                                     with:[self routerRootModule]];
+                              [definition injectProperty:@selector(analyticsService)
+                                                    with:[self.serviceComponents analyticsService]];
                           }];
 }
 

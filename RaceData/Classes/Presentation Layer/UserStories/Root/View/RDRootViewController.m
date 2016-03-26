@@ -29,12 +29,12 @@
     } else {
         self.contentContainerView.transform = CGAffineTransformMakeScale(1., -1.);
     }
+    
     _hudded = !_hudded;
     [UIViewController attemptRotationToDeviceOrientation];
     
     [self.analyticsService trackEventWithCategory:ANALYTICS_CATEGORY_UI_ACTIONS action:@"hudChanged" label:_hudded ? @"YES" : @"NO"];
 }
-
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
@@ -114,7 +114,6 @@
 {
     [self.output showSettings];
 }
-
 
 #pragma mark - Методы жизненного цикла
 
