@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "AssemblyCollector.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   
+    BOOL enableCrashlytics = [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"RDEnableCrashlytics"] boolValue];
+    
+    if (enableCrashlytics)
+    {
+        [Fabric with:@[[Crashlytics class]]];
+    }
+    
     return YES;
 }
 

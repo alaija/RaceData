@@ -8,6 +8,8 @@ pod 'ViperMcFlurry'
 pod 'BlocksKit'
 pod 'EDSunriseSet'
 pod 'Google/Analytics', '~> 1.0.0'
+pod 'Fabric'
+pod 'Crashlytics'
 
 target 'RaceDataTests', :exclusive => true do
     pod 'OCMock'

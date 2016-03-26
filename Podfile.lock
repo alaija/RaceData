@@ -14,7 +14,10 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
   - EDSunriseSet (1.0)
+  - Fabric (1.6.7)
   - Google/Analytics (1.0.7):
     - Google/Core
     - GoogleAnalytics (~> 3.12)
@@ -47,7 +50,9 @@ PODS:
 
 DEPENDENCIES:
   - BlocksKit
+  - Crashlytics
   - EDSunriseSet
+  - Fabric
   - Google/Analytics (~> 1.0.0)
   - OCMock
   - PureLayout
@@ -59,7 +64,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   EDSunriseSet: bdc4760f496c8e6f9b9a727ffa645b6048aa2a09
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
   GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
   GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
