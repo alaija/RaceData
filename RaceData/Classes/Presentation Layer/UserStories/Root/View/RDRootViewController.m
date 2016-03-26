@@ -31,6 +31,8 @@
     }
     _hudded = !_hudded;
     [UIViewController attemptRotationToDeviceOrientation];
+    
+    [self.analyticsService trackEventWithCategory:ANALYTICS_CATEGORY_UI_ACTIONS action:@"hudChanged" label:_hudded ? @"YES" : @"NO"];
 }
 
 

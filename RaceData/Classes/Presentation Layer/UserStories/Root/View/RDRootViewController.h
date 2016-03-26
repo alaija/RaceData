@@ -10,12 +10,14 @@
 
 #import "RDRootViewInput.h"
 #import "RDRootContentEmbedder.h"
+#import "AnalyticsService.h"
 
 @protocol RDRootViewOutput;
 
 @interface RDRootViewController : UIViewController <RDRootViewInput, RDRootContentEmbedder>
 
 @property (nonatomic, strong) id<RDRootViewOutput> output;
+@property (nonatomic, strong) id<AnalyticsService> analyticsService;
 
 @property (weak, nonatomic) IBOutlet UIView *contentContainerView;
 @property (weak, nonatomic) IBOutlet UIView *gpsView;

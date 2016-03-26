@@ -51,6 +51,8 @@
 		E2F2A55872701FDA76513E05 /* RDGPSViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C211C1A35C3F9A9D2DBC275 /* RDGPSViewControllerTests.m */; };
 		E77644621C95A7F900597644 /* UIFont+RDFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E77644611C95A7F900597644 /* UIFont+RDFont.m */; };
 		E77644651C95A87700597644 /* UIScreen+RDScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E77644641C95A87700597644 /* UIScreen+RDScreen.m */; };
+		E98CCE8A1CA68EA500C3EF42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E98CCE891CA68EA500C3EF42 /* GoogleService-Info.plist */; };
+		E98CCE8F1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = E98CCE8E1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.m */; };
 		F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A317A1C4112A2007DC313 /* RDStyleKit.m */; };
 		F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31821C4118E7007DC313 /* ServiceComponentsAssembly.m */; };
 		F51A31891C411C9B007DC313 /* LocationServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31881C411C9B007DC313 /* LocationServiceImplementation.m */; };
@@ -173,6 +175,10 @@
 		E77644631C95A87700597644 /* UIScreen+RDScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+RDScreen.h"; path = "Categories/UIScreen+RDScreen.h"; sourceTree = "<group>"; };
 		E77644641C95A87700597644 /* UIScreen+RDScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+RDScreen.m"; path = "Categories/UIScreen+RDScreen.m"; sourceTree = "<group>"; };
 		E90DB471B401B2962D05085D /* RDSpeedometerInteractorOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerInteractorOutput.h; sourceTree = "<group>"; };
+		E98CCE891CA68EA500C3EF42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E98CCE8C1CA68FA500C3EF42 /* AnalyticsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnalyticsService.h; path = "Buisness Logic Layer/Services/AnalyticsService/AnalyticsService.h"; sourceTree = "<group>"; };
+		E98CCE8D1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalyticsServiceImplementation.h; path = "Buisness Logic Layer/Services/AnalyticsService/AnalyticsServiceImplementation.h"; sourceTree = "<group>"; };
+		E98CCE8E1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnalyticsServiceImplementation.m; path = "Buisness Logic Layer/Services/AnalyticsService/AnalyticsServiceImplementation.m"; sourceTree = "<group>"; };
 		EC510991228EF31EBE3A0E5B /* RDRootRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDRootRouter.h; sourceTree = "<group>"; };
 		F221D20EF0DAA75D75E49AA5 /* RDSpeedometerModuleInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerModuleInput.h; sourceTree = "<group>"; };
 		F2FF45C3B0881692C5383A93 /* RDSpeedometerAssembly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerAssembly.m; sourceTree = "<group>"; };
@@ -198,7 +204,7 @@
 		F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerLayer.h; sourceTree = "<group>"; };
 		F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerLayer.m; sourceTree = "<group>"; };
 		F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Cond.otf"; path = "../Supporting Files/MyriadPro-Cond.otf"; sourceTree = "<group>"; };
-		F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Cond.otf"; path = "RaceData/Supporting Files/MyriadPro-Cond.otf"; sourceTree = "<group>"; };
+		F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		F526B7C31C7D8915007B7C2C /* RDSpeedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSpeedLabel.h; path = RaceData/Classes/UIKIt/RDSpeedLabel.h; sourceTree = SOURCE_ROOT; };
 		F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSpeedLabel.m; path = RaceData/Classes/UIKIt/RDSpeedLabel.m; sourceTree = SOURCE_ROOT; };
 		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -714,6 +720,16 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		E98CCE8B1CA68F6B00C3EF42 /* AnalyticsService */ = {
+			isa = PBXGroup;
+			children = (
+				E98CCE8C1CA68FA500C3EF42 /* AnalyticsService.h */,
+				E98CCE8D1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.h */,
+				E98CCE8E1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.m */,
+			);
+			name = AnalyticsService;
+			sourceTree = "<group>";
+		};
 		EA2F8A20F7541C44C26E654D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +769,7 @@
 		F51A317F1C4117B0007DC313 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E98CCE8B1CA68F6B00C3EF42 /* AnalyticsService */,
 				F51A31851C41194A007DC313 /* MotionService */,
 				F51A31841C411938007DC313 /* LocationService */,
 			);
@@ -858,7 +875,6 @@
 		F58FE7B71C1C66980098D8CE = {
 			isa = PBXGroup;
 			children = (
-				F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */,
 				40109186164569D1B87D48AF /* Frameworks */,
 				437C8278B06F3D469FDA654C /* Pods */,
 				F58FE7C11C1C66980098D8CE /* Products */,
@@ -889,6 +905,8 @@
 		F58FE7C31C1C66980098D8CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E98CCE891CA68EA500C3EF42 /* GoogleService-Info.plist */,
+				F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */,
 				F51A31781C411294007DC313 /* StyleKit */,
 				F58FE7D41C1C66980098D8CE /* Info.plist */,
 				F58FE7C41C1C66980098D8CE /* main.m */,
@@ -969,7 +987,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Alan Kochev";
+				ORGANIZATIONNAME = "Pavel Panchenko";
 				TargetAttributes = {
 					F58FE7BF1C1C66980098D8CE = {
 						CreatedOnToolsVersion = 7.2;
@@ -1006,6 +1024,7 @@
 			files = (
 				F526B7C21C7D853F007B7C2C /* MyriadPro-Cond.otf in Resources */,
 				F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */,
+				E98CCE8A1CA68EA500C3EF42 /* GoogleService-Info.plist in Resources */,
 				F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */,
 				F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */,
 			);
@@ -1130,6 +1149,7 @@
 				F51A317B1C4112A2007DC313 /* RDStyleKit.m in Sources */,
 				E77644651C95A87700597644 /* UIScreen+RDScreen.m in Sources */,
 				53268D0D72936815D1F90016 /* RDRaceInfoRouter.m in Sources */,
+				E98CCE8F1CA68FCF00C3EF42 /* AnalyticsServiceImplementation.m in Sources */,
 				C789C241A44036924D3E6794 /* RDSpeedometerAssembly.m in Sources */,
 				F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */,
 				9D81F7CACD53AABD6100D1D2 /* RDSpeedometerViewController.m in Sources */,
@@ -1234,6 +1254,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1277,6 +1298,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1302,7 +1324,7 @@
 				INFOPLIST_FILE = "RaceData/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alaija.RaceData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.panchenko.RaceData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1315,7 +1337,7 @@
 				INFOPLIST_FILE = "RaceData/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alaija.RaceData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.panchenko.RaceData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

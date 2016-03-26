@@ -18,11 +18,15 @@
 #import "RDSpeedometerAssembly.h"
 #import "RDRaceInfoAssembly.h"
 #import "RDGPSAssembly.h"
+#import "ServiceComponents.h"
 
 @interface RDRootAssembly()
+
 @property (nonatomic, strong, readonly) RDSpeedometerAssembly *speedometerAssembly;
 @property (nonatomic, strong, readonly) RDGPSAssembly *gpsAssembly;
 @property (nonatomic, strong, readonly) RDRaceInfoAssembly *raceInfoAssembly;
+@property (nonatomic, strong, readonly) TyphoonAssembly <ServiceComponents> *serviceComponents;
+
 @end
 
 @implementation RDRootAssembly
@@ -34,6 +38,8 @@
                                                     with:[self presenterRootModule]];
                               [definition injectProperty:@selector(moduleInput)
                                                     with:[self presenterRootModule]];
+                              [definition injectProperty:@selector(analyticsService)
+                                                    with:[self.serviceComponents analyticsService]];
                           }];
 }
 

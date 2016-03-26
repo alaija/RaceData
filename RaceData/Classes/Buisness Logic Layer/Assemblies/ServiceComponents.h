@@ -8,10 +8,12 @@
 
 @protocol LocationService;
 @protocol MotionService;
+@protocol AnalyticsService;
 
 @protocol ServiceComponents <NSObject>
 
 - (id <LocationService>)locationService;
 - (id <MotionService>)motionService;
-
+- (id <AnalyticsService>)analyticsService;
+    
 @end

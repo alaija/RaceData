@@ -15,6 +15,19 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - EDSunriseSet (1.0)
+  - Google/Analytics (1.0.7):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (1.0.7):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.0)
+  - GoogleAnalytics (3.14.0)
+  - GoogleNetworkingUtilities (1.2.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.1.0)
+  - GoogleUtilities (1.2.0):
+    - GoogleSymbolUtilities (~> 1.0)
   - OCMock (3.2)
   - PureLayout (3.0.1)
   - RamblerTyphoonUtils/AssemblyCollector (1.0.0)
@@ -35,6 +48,7 @@ PODS:
 DEPENDENCIES:
   - BlocksKit
   - EDSunriseSet
+  - Google/Analytics (~> 1.0.0)
   - OCMock
   - PureLayout
   - RamblerTyphoonUtils/AssemblyCollector
@@ -46,6 +60,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   EDSunriseSet: bdc4760f496c8e6f9b9a727ffa645b6048aa2a09
+  Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
+  GoogleAnalytics: 9be1afdb8deeac4bb5f13ca7f7d3b9db2a1f43dc
+  GoogleNetworkingUtilities: ec1e9911aca811eb18b7144394fee6168b607785
+  GoogleSymbolUtilities: eb3965ea12710569c7b80db198a39e39b18613f7
+  GoogleUtilities: 85f8ad6b251544286a97163133d042ec95f889c5
   OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   RamblerTyphoonUtils: bafad8fd42ca7df9239d2ccb68021ba21d81d741
