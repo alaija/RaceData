@@ -17,7 +17,7 @@
     return [TyphoonDefinition withClass:[LocationServiceImplementation class]];
 }
 
-- (id <LocationService>)motionService {
+- (id <MotionService>)motionService {
     return [TyphoonDefinition withClass:[MotionServiceImplementation class]];
 }
 
