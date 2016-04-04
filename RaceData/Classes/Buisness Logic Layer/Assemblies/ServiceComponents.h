@@ -6,14 +6,13 @@
 //  Copyright © 2016 Alan Kochev. All rights reserved.
 //
 
-@protocol LocationService;
-@protocol MotionService;
-@protocol AnalyticsService;
+@protocol LocationService, MotionService, AnalyticsService, SettingsService;
 
 @protocol ServiceComponents <NSObject>
 
 - (id <LocationService>)locationService;
 - (id <MotionService>)motionService;
 - (id <AnalyticsService>)analyticsService;
-    
+- (id <SettingsService>)settingsService;
+
 @end

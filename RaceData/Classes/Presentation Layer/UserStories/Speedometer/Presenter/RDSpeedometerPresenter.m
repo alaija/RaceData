@@ -26,6 +26,8 @@
 - (void)didTriggerViewReadyEvent
 {
 	[self.view setupInitialState];
+    [self.view setNightMode:self.settingsService.settings.nightMode];
+    [self.view setSpeedLimit:self.settingsService.settings.speedLimit];
     [self.interactor setupManagers];
 }
 

@@ -11,5 +11,6 @@
 @interface RDSpeedometerView : UIView
 
 @property (nonatomic) CGFloat speed;
+@property (nonatomic) BOOL overSpeedLimit;
 
 @end

@@ -47,6 +47,8 @@
                                                     with:[self interactorSpeedometerModule]];
                               [definition injectProperty:@selector(router)
                                                     with:[self routerSpeedometerModule]];
+                              [definition injectProperty:@selector(settingsService)
+                                                    with:[self.serviceComponents settingsService]];
                           }];
 }
 

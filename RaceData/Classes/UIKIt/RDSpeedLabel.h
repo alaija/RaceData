@@ -11,5 +11,6 @@
 @interface RDSpeedLabel : UILabel
 
 - (instancetype)initWithTextSize:(CGFloat)size;
+- (instancetype)initWithTextSize:(CGFloat)size isIndicator:(BOOL)indicatorStyle;
 
 @end

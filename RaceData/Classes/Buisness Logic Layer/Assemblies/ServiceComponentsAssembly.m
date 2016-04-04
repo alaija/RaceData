@@ -10,6 +10,7 @@
 #import "LocationServiceImplementation.h"
 #import "MotionServiceImplementation.h"
 #import "AnalyticsServiceImplementation.h"
+#import "SettingsServiceImplementation.h"
 
 @implementation ServiceComponentsAssembly
 
@@ -23,6 +24,12 @@
 
 - (id <AnalyticsService>)analyticsService {
     return [TyphoonDefinition withClass:[AnalyticsServiceImplementation class] configuration:^(TyphoonDefinition *definition) {
+        definition.scope = TyphoonScopeSingleton;
+    }];
+}
+
+- (id <SettingsService>)settingsService {
+    return [TyphoonDefinition withClass:[SettingsServiceImplementation class] configuration:^(TyphoonDefinition *definition) {
         definition.scope = TyphoonScopeSingleton;
     }];
 }

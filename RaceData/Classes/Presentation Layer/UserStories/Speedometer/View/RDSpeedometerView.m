@@ -56,7 +56,7 @@
     _mesureLabel = [UILabel new];
     [UILabel setupLabelAsDefault:_mesureLabel];
     _mesureLabel.text = @"КМ/Ч";
-    _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:[UIFont bigFontSize]];
+    _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:[UIFont bigFontSize] isIndicator:NO];
     [_speedLabel setText:@"0"];
     
     self.speedIndicators = @[ [RDSpeedLabel new],
@@ -177,7 +177,25 @@
     self.prevAngleFactor = self.angle;
 }
 
-
+- (void)setOverSpeedLimit:(BOOL)overSpeedLimit
+{
+    if (_overSpeedLimit != overSpeedLimit) {
+        _speedLabel.highlighted = overSpeedLimit;
+        
+        [_panelView.layer removeAllAnimations];
+        [UIView transitionWithView:_panelView
+                          duration:0.2f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^{
+                            _panelView.image = (overSpeedLimit
+                                                ? [UIImage imageNamed:@"overspeedometerView"]
+                                                : [UIImage imageNamed:@"speedometerView"]);
+                        } completion:NULL];
+        
+    }
+    
+    _overSpeedLimit = overSpeedLimit;
+}
 #pragma mark -
 #pragma mark rotateNeedle Method
 -(void)rotateNeedle

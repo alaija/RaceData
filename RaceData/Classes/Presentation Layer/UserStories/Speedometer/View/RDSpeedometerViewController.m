@@ -22,6 +22,7 @@
 @implementation RDSpeedometerViewController
 
 @synthesize nightMode = _nightMode;
+@synthesize speedLimit = _speedLimit;
 
 #pragma mark - Методы жизненного цикла
 
@@ -55,7 +56,9 @@
 - (void)updateSpeed:(CGFloat)speed
 {
     [self.speedometer setSpeed:speed];
+    [self.speedometer setOverSpeedLimit:(_speedLimit != -1 && speed >_speedLimit)];
 }
+
 
 #pragma mark - Методы RDRootContent
 

@@ -9,6 +9,7 @@
 #import "RDSpeedometerViewOutput.h"
 #import "RDSpeedometerInteractorOutput.h"
 #import "RDSpeedometerModuleInput.h"
+#import "SettingsService.h"
 
 @protocol RDSpeedometerViewInput;
 @protocol RDSpeedometerInteractorInput;
@@ -19,5 +20,7 @@
 @property (nonatomic, weak) id<RDSpeedometerViewInput> view;
 @property (nonatomic, strong) id<RDSpeedometerInteractorInput> interactor;
 @property (nonatomic, strong) id<RDSpeedometerRouterInput> router;
+
+@property (nonatomic, strong) id<SettingsService> settingsService;
 
 @end
