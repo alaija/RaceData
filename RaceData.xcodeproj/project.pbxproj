@@ -74,6 +74,8 @@
 		F526B7C51C7D8915007B7C2C /* RDSpeedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */; };
 		F53B1F981CB223AF00D021C8 /* RDSettingsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F971CB223AF00D021C8 /* RDSettingsObject.m */; };
 		F53B1F9D1CB227F000D021C8 /* RLMObject+RaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F9C1CB227F000D021C8 /* RLMObject+RaceData.m */; };
+		F53B1FA01CBB4F1600D021C8 /* RDOverspeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F9F1CBB4F1600D021C8 /* RDOverspeedView.m */; };
+		F53B1FA31CBB671700D021C8 /* RDSpeedLmitView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1FA21CBB671700D021C8 /* RDSpeedLmitView.m */; };
 		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
 		F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */; };
 		F5548FA81CB21F06009B863F /* SettingsServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5548FA71CB21F06009B863F /* SettingsServiceImplementation.m */; };
@@ -245,6 +247,10 @@
 		F53B1F971CB223AF00D021C8 /* RDSettingsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSettingsObject.m; path = "Model/Realm Objects/RDSettingsObject.m"; sourceTree = "<group>"; };
 		F53B1F9B1CB227F000D021C8 /* RLMObject+RaceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RLMObject+RaceData.h"; path = "Model/Realm Objects/Categories/RLMObject+RaceData.h"; sourceTree = "<group>"; };
 		F53B1F9C1CB227F000D021C8 /* RLMObject+RaceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RLMObject+RaceData.m"; path = "Model/Realm Objects/Categories/RLMObject+RaceData.m"; sourceTree = "<group>"; };
+		F53B1F9E1CBB4F1600D021C8 /* RDOverspeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDOverspeedView.h; sourceTree = "<group>"; };
+		F53B1F9F1CBB4F1600D021C8 /* RDOverspeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDOverspeedView.m; sourceTree = "<group>"; };
+		F53B1FA11CBB671700D021C8 /* RDSpeedLmitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedLmitView.h; sourceTree = "<group>"; };
+		F53B1FA21CBB671700D021C8 /* RDSpeedLmitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedLmitView.m; sourceTree = "<group>"; };
 		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F5548FA51CB21EDE009B863F /* SettingsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsService.h; path = "Buisness Logic Layer/Services/SettingsService/SettingsService.h"; sourceTree = "<group>"; };
@@ -369,6 +375,10 @@
 				F51A31931C417570007DC313 /* RDSpeedometerView.m */,
 				F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */,
 				F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */,
+				F53B1F9E1CBB4F1600D021C8 /* RDOverspeedView.h */,
+				F53B1F9F1CBB4F1600D021C8 /* RDOverspeedView.m */,
+				F53B1FA11CBB671700D021C8 /* RDSpeedLmitView.h */,
+				F53B1FA21CBB671700D021C8 /* RDSpeedLmitView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1354,6 +1364,7 @@
 				F51A318D1C415FFA007DC313 /* ModuleAssemblyBase.m in Sources */,
 				F58FE7C81C1C66980098D8CE /* AppDelegate.m in Sources */,
 				F58FE7C51C1C66980098D8CE /* main.m in Sources */,
+				F53B1FA31CBB671700D021C8 /* RDSpeedLmitView.m in Sources */,
 				6FCA96B1EDA38574843F245C /* RDRaceInfoAssembly.m in Sources */,
 				6A35ADECABDC6DE0C994AFFD /* RDRaceInfoViewController.m in Sources */,
 				89633CFED7A9A032B02A6F5F /* RDRaceInfoPresenter.m in Sources */,
@@ -1368,6 +1379,7 @@
 				9D81F7CACD53AABD6100D1D2 /* RDSpeedometerViewController.m in Sources */,
 				F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */,
 				C6242F4130CC5EF156E62441 /* RDSpeedometerPresenter.m in Sources */,
+				F53B1FA01CBB4F1600D021C8 /* RDOverspeedView.m in Sources */,
 				F5EDF4111C84183B008D71B3 /* UILabel+RDLabel.m in Sources */,
 				F51A31831C4118E7007DC313 /* ServiceComponentsAssembly.m in Sources */,
 				00EF6E3ECEDEEFAD5F30BBC3 /* RDSpeedometerInteractor.m in Sources */,

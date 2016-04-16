@@ -15,11 +15,15 @@
 @implementation ServiceComponentsAssembly
 
 - (id <LocationService>)locationService {
-    return [TyphoonDefinition withClass:[LocationServiceImplementation class]];
+    return [TyphoonDefinition withClass:[LocationServiceImplementation class] configuration:^(TyphoonDefinition *definition) {
+        definition.scope = TyphoonScopeSingleton;
+    }];
 }
 
 - (id <MotionService>)motionService {
-    return [TyphoonDefinition withClass:[MotionServiceImplementation class]];
+    return [TyphoonDefinition withClass:[MotionServiceImplementation class] configuration:^(TyphoonDefinition *definition) {
+        definition.scope = TyphoonScopeSingleton;
+    }];
 }
 
 - (id <AnalyticsService>)analyticsService {

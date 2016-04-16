@@ -17,6 +17,7 @@
 
 + (BOOL)is4inch
 {
+    
     return [self height] == 568.;
 }
 
@@ -32,7 +33,7 @@
 
 + (CGFloat)height
 {
-    return [self mainScreen].bounds.size.height;
+    return MAX([self mainScreen].bounds.size.height, [self mainScreen].bounds.size.width);
 }
 
 @end

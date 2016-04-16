@@ -26,6 +26,21 @@
     return size;
 }
 
++ (CGFloat)alertFontSize
+{
+    CGFloat size = 40.;
+    
+    if ([UIScreen is35inch]) {
+        size = 30.;
+    } else if ([UIScreen is4inch]) {
+        size = 44.;
+    } else if ([UIScreen is47inch]) {
+        size = 46.;
+    }
+    
+    return size;
+}
+
 + (CGFloat)bigFontSize
 {
     CGFloat size = 120.;

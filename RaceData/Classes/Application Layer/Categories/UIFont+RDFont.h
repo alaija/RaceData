@@ -11,6 +11,7 @@
 @interface UIFont (RDFont)
 
 + (CGFloat)bigFontSize;
++ (CGFloat)alertFontSize;
 + (CGFloat)defautFontSize;
 + (UIFont *)defaultFont;
 
