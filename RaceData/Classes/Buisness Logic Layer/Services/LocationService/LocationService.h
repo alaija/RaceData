@@ -22,6 +22,8 @@ typedef NS_ENUM(NSUInteger, GPSSignalQuality) {
 @property (nonatomic, readonly) CGFloat currentSpeed;
 @property (nonatomic, readonly) GPSSignalQuality signalQuality;
 
+@property (nonatomic) BOOL metric;
+
 - (void)startUpdates;
 - (void)stopUpdates;
 - (void)requestAccess;

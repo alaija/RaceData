@@ -14,7 +14,8 @@
 + (NSDictionary *)defaultPropertyValues
 {
     NSMutableDictionary *defaults = [NSMutableDictionary dictionaryWithDictionary:[self generateDefaultPropertyValues]];
-    defaults[NSStringFromSelector(@selector(speedLimit))] = @40;
+    defaults[NSStringFromSelector(@selector(speedLimit))] = @300;
+    defaults[NSStringFromSelector(@selector(metric))] = @NO;
     
     return [defaults copy];
 }

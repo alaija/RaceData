@@ -6,13 +6,15 @@
 //  Copyright 2015 RaceData. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @import UIKit;
+
+@class RDSettingsObject;
 
 @protocol RDRaceInfoInteractorOutput <NSObject>
 
 - (void)didSetUpManagers;
+- (void)updateSettings:(RDSettingsObject *)settings;
+
 - (void)motionStarted;
 - (void)speedChanged:(CGFloat)newSpeed;
 

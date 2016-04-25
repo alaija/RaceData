@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 static CGFloat const LocationServiceImplementationKMPH = 3.6;
+static CGFloat const LocationServiceImplementationMPH = 2.237;
 
 @interface LocationServiceImplementation() <CLLocationManagerDelegate>
 
@@ -26,6 +27,8 @@ static CGFloat const LocationServiceImplementationKMPH = 3.6;
 @end
 
 @implementation LocationServiceImplementation
+
+@synthesize metric = _metric;
 
 - (instancetype)init
 {
@@ -65,7 +68,9 @@ static CGFloat const LocationServiceImplementationKMPH = 3.6;
     self.currentSpeed = ((location.speed <= 0.
                           || _signalQuality <= GPSSignalQualityNormal)
                          ? 0.
-                         : location.speed * LocationServiceImplementationKMPH);
+                         : location.speed *  (_metric
+                                              ? LocationServiceImplementationKMPH
+                                              : LocationServiceImplementationMPH));
 }
 
 #pragma mark - Core Location

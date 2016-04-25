@@ -11,6 +11,7 @@
 @protocol RDSpeedometerViewInput <NSObject>
 
 @property (nonatomic) CGFloat speedLimit;
+@property (nonatomic) BOOL metricSystem;
 @property (nonatomic) BOOL nightMode;
 
 /**

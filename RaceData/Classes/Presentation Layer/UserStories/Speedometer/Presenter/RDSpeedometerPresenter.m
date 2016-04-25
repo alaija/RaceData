@@ -26,9 +26,14 @@
 - (void)didTriggerViewReadyEvent
 {
 	[self.view setupInitialState];
-    [self.view setNightMode:self.settingsService.settings.nightMode];
-    [self.view setSpeedLimit:self.settingsService.settings.speedLimit];
     [self.interactor setupManagers];
+}
+
+- (void)updateSettings:(RDSettingsObject *)settings
+{
+    [self.view setMetricSystem:settings.metric];
+    [self.view setNightMode:settings.nightMode];
+    [self.view setSpeedLimit:settings.speedLimit];
 }
 
 #pragma mark - Методы RDSpeedometerInteractorOutput

@@ -16,5 +16,6 @@
 + (BOOL)is55inch;
 
 + (CGFloat)height;
++ (CGFloat)navigationButtonWidth;
 
 @end

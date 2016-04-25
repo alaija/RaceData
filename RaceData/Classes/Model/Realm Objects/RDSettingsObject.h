@@ -12,6 +12,7 @@
 
 @property (nonatomic) double speedLimit;
 @property (nonatomic) BOOL nightMode;
+@property (nonatomic) BOOL metric;
 
 @end
 

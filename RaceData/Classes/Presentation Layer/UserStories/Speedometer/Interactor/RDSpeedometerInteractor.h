@@ -8,12 +8,14 @@
 
 #import "RDSpeedometerInteractorInput.h"
 #import "LocationService.h"
+#import "SettingsService.h"
 
 @protocol RDSpeedometerInteractorOutput;
 
 @interface RDSpeedometerInteractor : NSObject <RDSpeedometerInteractorInput>
 
 @property (nonatomic, strong) NSObject<LocationService> *locationService;
+@property (nonatomic, strong) id<SettingsService> settingsService;
 
 @property (nonatomic, weak) id<RDSpeedometerInteractorOutput> output;
 

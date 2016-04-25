@@ -70,13 +70,11 @@
 		F51A31911C416F7C007DC313 /* MotionServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31901C416F7C007DC313 /* MotionServiceImplementation.m */; };
 		F51A31941C417570007DC313 /* RDSpeedometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31931C417570007DC313 /* RDSpeedometerView.m */; };
 		F51A31971C4A2FD5007DC313 /* RDSpeedometerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */; };
-		F526B7C21C7D853F007B7C2C /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */; };
 		F526B7C51C7D8915007B7C2C /* RDSpeedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */; };
 		F53B1F981CB223AF00D021C8 /* RDSettingsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F971CB223AF00D021C8 /* RDSettingsObject.m */; };
 		F53B1F9D1CB227F000D021C8 /* RLMObject+RaceData.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F9C1CB227F000D021C8 /* RLMObject+RaceData.m */; };
 		F53B1FA01CBB4F1600D021C8 /* RDOverspeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1F9F1CBB4F1600D021C8 /* RDOverspeedView.m */; };
 		F53B1FA31CBB671700D021C8 /* RDSpeedLmitView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53B1FA21CBB671700D021C8 /* RDSpeedLmitView.m */; };
-		F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54520CA1C1C832500F795F1 /* Images.xcassets */; };
 		F54520CD1C1FD50F00F795F1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */; };
 		F5548FA81CB21F06009B863F /* SettingsServiceImplementation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5548FA71CB21F06009B863F /* SettingsServiceImplementation.m */; };
 		F58FE7C51C1C66980098D8CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7C41C1C66980098D8CE /* main.m */; };
@@ -84,6 +82,10 @@
 		F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7CC1C1C66980098D8CE /* Main.storyboard */; };
 		F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58FE7D11C1C66980098D8CE /* LaunchScreen.storyboard */; };
 		F58FE7DE1C1C66980098D8CE /* RaceDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F58FE7DD1C1C66980098D8CE /* RaceDataTests.m */; };
+		F5D08E321CC4A3C50026A86A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5D08E341CC4A3C50026A86A /* Localizable.strings */; };
+		F5D08E371CCC8E850026A86A /* MyriadPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5D08E361CCC8D9B0026A86A /* MyriadPro-Bold.otf */; };
+		F5D08E381CCC8EAE0026A86A /* MyriadPro-Cond.otf in Resources */ = {isa = PBXBuildFile; fileRef = F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */; };
+		F5D08E3A1CCCAD2F0026A86A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D08E391CCCAD2F0026A86A /* Images.xcassets */; };
 		F5EDF4111C84183B008D71B3 /* UILabel+RDLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -240,7 +242,6 @@
 		F51A31951C4A2FD5007DC313 /* RDSpeedometerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedometerLayer.h; sourceTree = "<group>"; };
 		F51A31961C4A2FD5007DC313 /* RDSpeedometerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedometerLayer.m; sourceTree = "<group>"; };
 		F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Cond.otf"; path = "../Supporting Files/MyriadPro-Cond.otf"; sourceTree = "<group>"; };
-		F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Cond.otf"; sourceTree = "<group>"; };
 		F526B7C31C7D8915007B7C2C /* RDSpeedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSpeedLabel.h; path = RaceData/Classes/UIKIt/RDSpeedLabel.h; sourceTree = SOURCE_ROOT; };
 		F526B7C41C7D8915007B7C2C /* RDSpeedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RDSpeedLabel.m; path = RaceData/Classes/UIKIt/RDSpeedLabel.m; sourceTree = SOURCE_ROOT; };
 		F53B1F961CB223AF00D021C8 /* RDSettingsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RDSettingsObject.h; path = "Model/Realm Objects/RDSettingsObject.h"; sourceTree = "<group>"; };
@@ -251,7 +252,6 @@
 		F53B1F9F1CBB4F1600D021C8 /* RDOverspeedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDOverspeedView.m; sourceTree = "<group>"; };
 		F53B1FA11CBB671700D021C8 /* RDSpeedLmitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDSpeedLmitView.h; sourceTree = "<group>"; };
 		F53B1FA21CBB671700D021C8 /* RDSpeedLmitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDSpeedLmitView.m; sourceTree = "<group>"; };
-		F54520CA1C1C832500F795F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F54520CC1C1FD50F00F795F1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F5548FA51CB21EDE009B863F /* SettingsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsService.h; path = "Buisness Logic Layer/Services/SettingsService/SettingsService.h"; sourceTree = "<group>"; };
 		F5548FA61CB21F06009B863F /* SettingsServiceImplementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsServiceImplementation.h; path = "Buisness Logic Layer/Services/SettingsService/SettingsServiceImplementation.h"; sourceTree = "<group>"; };
@@ -268,6 +268,12 @@
 		F58FE7DF1C1C66980098D8CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C40C9519E51D6C2A4E2CF6 /* RDSettingsAssembly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RDSettingsAssembly.h; sourceTree = "<group>"; };
 		F5C790EA1C5F3EDF000E2255 /* RDEmbeddedContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDEmbeddedContent.h; sourceTree = "<group>"; };
+		F5D08E2E1CC4A3890026A86A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F5D08E2F1CC4A3890026A86A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		F5D08E331CC4A3C50026A86A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5D08E351CC4A3C80026A86A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5D08E361CCC8D9B0026A86A /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MyriadPro-Bold.otf"; path = "../Supporting Files/MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		F5D08E391CCCAD2F0026A86A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F5EDF40F1C84183B008D71B3 /* UILabel+RDLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+RDLabel.h"; path = "Categories/UILabel+RDLabel.h"; sourceTree = "<group>"; };
 		F5EDF4101C84183B008D71B3 /* UILabel+RDLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+RDLabel.m"; path = "Categories/UILabel+RDLabel.m"; sourceTree = "<group>"; };
 		FF4650E940B36242D7ABFAA5 /* RDSpeedometerAssembly_Testable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RDSpeedometerAssembly_Testable.h; path = Speedometer/Assembly/RDSpeedometerAssembly_Testable.h; sourceTree = "<group>"; };
@@ -1014,7 +1020,7 @@
 			isa = PBXGroup;
 			children = (
 				F526B7C01C7D830F007B7C2C /* MyriadPro-Cond.otf */,
-				F54520CA1C1C832500F795F1 /* Images.xcassets */,
+				F5D08E361CCC8D9B0026A86A /* MyriadPro-Bold.otf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1113,11 +1119,12 @@
 		F58FE7C31C1C66980098D8CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5D08E391CCCAD2F0026A86A /* Images.xcassets */,
 				E98CCE891CA68EA500C3EF42 /* GoogleService-Info.plist */,
-				F526B7C11C7D853F007B7C2C /* MyriadPro-Cond.otf */,
 				F51A31781C411294007DC313 /* StyleKit */,
 				F58FE7D41C1C66980098D8CE /* Info.plist */,
 				F58FE7C41C1C66980098D8CE /* main.m */,
+				F5D08E341CC4A3C50026A86A /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1215,6 +1222,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = F58FE7B71C1C66980098D8CE;
 			productRefGroup = F58FE7C11C1C66980098D8CE /* Products */;
@@ -1232,8 +1240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F526B7C21C7D853F007B7C2C /* MyriadPro-Cond.otf in Resources */,
-				F54520CB1C1C832500F795F1 /* Images.xcassets in Resources */,
+				F5D08E381CCC8EAE0026A86A /* MyriadPro-Cond.otf in Resources */,
+				F5D08E371CCC8E850026A86A /* MyriadPro-Bold.otf in Resources */,
+				F5D08E3A1CCCAD2F0026A86A /* Images.xcassets in Resources */,
+				F5D08E321CC4A3C50026A86A /* Localizable.strings in Resources */,
 				E98CCE8A1CA68EA500C3EF42 /* GoogleService-Info.plist in Resources */,
 				F58FE7D31C1C66980098D8CE /* LaunchScreen.storyboard in Resources */,
 				F58FE7CE1C1C66980098D8CE /* Main.storyboard in Resources */,
@@ -1455,6 +1465,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F58FE7CD1C1C66980098D8CE /* Base */,
+				F5D08E2F1CC4A3890026A86A /* ru */,
 			);
 			name = Main.storyboard;
 			path = .;
@@ -1464,9 +1475,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				F58FE7D21C1C66980098D8CE /* Base */,
+				F5D08E2E1CC4A3890026A86A /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		F5D08E341CC4A3C50026A86A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5D08E331CC4A3C50026A86A /* en */,
+				F5D08E351CC4A3C80026A86A /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

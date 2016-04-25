@@ -10,11 +10,9 @@
 
 @protocol RDRaceInfoViewInput <NSObject>
 
-/**
- @author alaija
+@property (nonatomic) BOOL metricSystem;
+@property (nonatomic) BOOL nightMode;
 
- Метод настраивает начальный стейт view
- */
 - (void)setupInitialState;
 
 - (void)setupReadyToStartState;

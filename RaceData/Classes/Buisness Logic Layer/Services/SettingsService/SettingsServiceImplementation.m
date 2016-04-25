@@ -8,6 +8,8 @@
 
 #import "SettingsServiceImplementation.h"
 
+NSString *const RDSettingsDidUpdate = @"RDSettingsDidUpdate";
+
 @implementation SettingsServiceImplementation
 
 - (RDSettingsObject *)settings
@@ -35,6 +37,8 @@
     if (transactionBlock) {
         transactionBlock(settings);
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:RDSettingsDidUpdate object:nil];
     
     [realm commitWriteTransaction];
 }

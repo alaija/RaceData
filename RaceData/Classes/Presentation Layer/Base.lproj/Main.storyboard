@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="MyriadPro-Cond.otf">
@@ -37,11 +38,20 @@
                                             <constraint firstAttribute="height" constant="80" id="fig-qd-1ZZ"/>
                                         </constraints>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panel" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-dz-FTV">
+                                        <rect key="frame" x="0.0" y="314" width="600" height="285.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fOk-dz-FTV" secondAttribute="height" multiplier="414:197" id="SDG-98-dIq"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="4dF-qB-iLU" firstAttribute="top" secondItem="pFK-Uj-fOv" secondAttribute="top" id="0cj-o1-NBp"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOk-dz-FTV" secondAttribute="bottom" id="595-F2-7dL"/>
                                     <constraint firstAttribute="bottom" secondItem="4dF-qB-iLU" secondAttribute="bottom" id="5yQ-zc-uNs"/>
+                                    <constraint firstItem="fOk-dz-FTV" firstAttribute="leading" secondItem="pFK-Uj-fOv" secondAttribute="leading" id="IoX-fi-ntg"/>
+                                    <constraint firstAttribute="trailing" secondItem="fOk-dz-FTV" secondAttribute="trailing" id="Juy-pQ-aGY"/>
                                     <constraint firstAttribute="trailing" secondItem="4dF-qB-iLU" secondAttribute="trailing" id="e17-f5-D8e"/>
                                     <constraint firstItem="4dF-qB-iLU" firstAttribute="leading" secondItem="pFK-Uj-fOv" secondAttribute="leading" id="giU-d2-7fV"/>
                                     <constraint firstItem="tWn-pI-Vjg" firstAttribute="centerX" secondItem="pFK-Uj-fOv" secondAttribute="centerX" id="moJ-C4-aSE"/>
@@ -58,35 +68,42 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-1j-vZf">
-                                <rect key="frame" x="534" y="550" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="565" y="565" width="30" height="30"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyG-OA-PC6">
-                                <rect key="frame" x="10" y="556" width="30" height="34"/>
+                                <rect key="frame" x="5" y="565" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xyG-OA-PC6" secondAttribute="height" multiplier="1:1" id="GbM-Yq-05W"/>
+                                    <constraint firstAttribute="width" constant="30" id="z6N-iE-KxD"/>
+                                </constraints>
+                                <state key="normal" image="speedometer"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xyG-OA-PC6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="95t-4D-emA"/>
+                            <constraint firstItem="xyG-OA-PC6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="95t-4D-emA"/>
                             <constraint firstItem="wjd-zR-TXR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="A5l-5E-w8g"/>
                             <constraint firstAttribute="trailing" secondItem="lo6-8M-Zxd" secondAttribute="trailing" constant="20" id="GOd-an-6bz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pFK-Uj-fOv" secondAttribute="bottom" id="I4B-n6-Orc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awe-1j-vZf" secondAttribute="bottom" constant="20" id="JLj-bq-zW1"/>
-                            <constraint firstAttribute="trailing" secondItem="Awe-1j-vZf" secondAttribute="trailing" constant="20" id="NbA-jV-1m8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awe-1j-vZf" secondAttribute="bottom" constant="5" id="JLj-bq-zW1"/>
+                            <constraint firstAttribute="trailing" secondItem="Awe-1j-vZf" secondAttribute="trailing" constant="5" id="NbA-jV-1m8"/>
                             <constraint firstAttribute="trailing" secondItem="pFK-Uj-fOv" secondAttribute="trailing" id="SeT-oP-LU1"/>
                             <constraint firstItem="lo6-8M-Zxd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="gqi-eJ-iZr"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hO5-lF-BfA"/>
+                            <constraint firstItem="xyG-OA-PC6" firstAttribute="width" secondItem="Awe-1j-vZf" secondAttribute="width" id="lGD-wL-DnL"/>
                             <constraint firstItem="pFK-Uj-fOv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mdl-04-4n6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyG-OA-PC6" secondAttribute="bottom" constant="10" id="rCF-fY-pLP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyG-OA-PC6" secondAttribute="bottom" constant="5" id="rCF-fY-pLP"/>
                             <constraint firstItem="wjd-zR-TXR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ssN-F7-aPx"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="contentContainerView" destination="pFK-Uj-fOv" id="lqR-Gx-2yJ"/>
+                        <outlet property="glowPanelView" destination="fOk-dz-FTV" id="NbU-KZ-zaw"/>
                         <outlet property="gpsView" destination="tWn-pI-Vjg" id="adM-Lu-8Pi"/>
                         <outlet property="leftActionButton" destination="wjd-zR-TXR" id="8Zb-D9-43w"/>
                         <outlet property="leftNavigationButton" destination="xyG-OA-PC6" id="FfI-Y8-YgP"/>
+                        <outlet property="navigationButtonWidthConstraint" destination="z6N-iE-KxD" id="IZg-Ip-m2R"/>
                         <outlet property="rightActionButton" destination="lo6-8M-Zxd" id="CLC-Yg-t2v"/>
                         <outlet property="rightNavigationButton" destination="Awe-1j-vZf" id="zi9-1a-xwU"/>
                     </connections>
@@ -98,5 +115,7 @@
     </scenes>
     <resources>
         <image name="background" width="414" height="724"/>
+        <image name="panel" width="414" height="196"/>
+        <image name="speedometer" width="84" height="73"/>
     </resources>
 </document>

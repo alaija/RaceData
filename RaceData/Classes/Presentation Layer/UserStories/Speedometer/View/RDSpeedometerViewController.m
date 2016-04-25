@@ -31,6 +31,7 @@
 
 @synthesize nightMode = _nightMode;
 @synthesize speedLimit = _speedLimit;
+@synthesize metricSystem = _metricSystem;
 
 #pragma mark - Методы жизненного цикла
 
@@ -58,6 +59,12 @@
 {
     _speedLimit = speedLimit;
     [self.speedLimitView setSpeedLimit:speedLimit];
+}
+
+-(void)setMetricSystem:(BOOL)metricSystem
+{
+    _metricSystem = metricSystem;
+    [self.speedometer setMetric:metricSystem];
 }
 #pragma mark - Методы RDSpeedometerViewInput
 
@@ -91,7 +98,7 @@
         [self.overspeedView autoSetDimension:ALDimensionHeight toSize:50.];
         [self.overspeedView autoAlignAxisToSuperviewAxis:ALAxisVertical];
         
-        [self.speedLimitView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20.];
+        [self.speedLimitView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10.];
         [self.speedLimitView autoSetDimension:ALDimensionWidth toSize:[RDSpeedLmitView layoutWidth]];
         [self.speedLimitView autoSetDimension:ALDimensionHeight toSize:[RDSpeedLmitView layoutWidth]];
         _speedLimitCenterConstraint =

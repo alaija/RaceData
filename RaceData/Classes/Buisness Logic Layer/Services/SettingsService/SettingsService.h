@@ -8,6 +8,8 @@
 
 #import "RDSettingsObject.h"
 
+extern NSString *const RDSettingsDidUpdate;
+
 @protocol SettingsService <NSObject>
 
 @property (nonatomic) RDSettingsObject * settings;

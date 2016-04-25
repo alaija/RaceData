@@ -48,6 +48,12 @@
     [self calculateDeviationAngle];
 }
 
+- (void)setMetric:(BOOL)metric
+{
+    _metric = metric;
+    [self updateIndicators];
+}
+
 - (void)setup
 {
     _panelView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"speedometerView"]];
@@ -55,7 +61,6 @@
     _needleView.layer.anchorPoint = CGPointMake(.5, .835);
     _mesureLabel = [UILabel new];
     [UILabel setupLabelAsDefault:_mesureLabel];
-    _mesureLabel.text = @"КМ/Ч";
     _speedLabel = [[RDSpeedLabel alloc] initWithTextSize:[UIFont bigFontSize] isIndicator:NO];
     [_speedLabel setText:@"0"];
     
@@ -72,20 +77,6 @@
                               [RDSpeedLabel new],
                               [RDSpeedLabel new],
                               [RDSpeedLabel new] ];
-    
-    [self.speedIndicators[0] setText:@"0"];
-    [self.speedIndicators[1] setText:@"20"];
-    [self.speedIndicators[2] setText:@"40"];
-    [self.speedIndicators[3] setText:@"60"];
-    [self.speedIndicators[4] setText:@"80"];
-    [self.speedIndicators[5] setText:@"100"];
-    [self.speedIndicators[6] setText:@"120"];
-    [self.speedIndicators[7] setText:@"140"];
-    [self.speedIndicators[8] setText:@"160"];
-    [self.speedIndicators[9] setText:@"180"];
-    [self.speedIndicators[10] setText:@"220"];
-    [self.speedIndicators[11] setText:@"260"];
-    [self.speedIndicators[12] setText:@"300"];
     
     for (RDSpeedLabel *label in self.speedIndicators) {
         [self addSubview:label];
@@ -136,15 +127,38 @@
     }];
 }
 
--(void) calculateDeviationAngle
+- (void)updateIndicators
+{
+    _mesureLabel.text = (_metric
+                         ? NSLocalizedString(@"KMPH", nil)
+                         : NSLocalizedString(@"MPH", nil));
+
+    [self.speedIndicators[0] setText:_metric ? @"0" : @"0"];
+    [self.speedIndicators[1] setText:_metric ? @"20" : @"10"];
+    [self.speedIndicators[2] setText:_metric ? @"40" : @"20"];
+    [self.speedIndicators[3] setText:_metric ? @"60" : @"30"];
+    [self.speedIndicators[4] setText:_metric ? @"80" : @"40"];
+    [self.speedIndicators[5] setText:_metric ? @"100" : @"60"];
+    [self.speedIndicators[6] setText:_metric ? @"120" : @"80"];
+    [self.speedIndicators[7] setText:_metric ? @"140" : @"100"];
+    [self.speedIndicators[8] setText:_metric ? @"160" : @"120"];
+    [self.speedIndicators[9] setText:_metric ? @"180" : @"140"];
+    [self.speedIndicators[10] setText:_metric ? @"220" : @"160"];
+    [self.speedIndicators[11] setText:_metric ? @"260" : @"180"];
+    [self.speedIndicators[12] setText:_metric ? @"300" : @"200"];
+}
+
+- (void)calculateDeviationAngle
 {
     CGFloat speed = self.speed;
+    CGFloat doubleLimit = _metric ? 180. : 40.;
+    CGFloat maxValue = _metric ? 240. : 120.;
     
-    if (speed > 180) {
-        speed = 180 + (self.speed - 180.) / 2;
+    if (speed > doubleLimit) {
+        speed = doubleLimit + (self.speed - doubleLimit) / 2;
     }
     
-    self.angle = ((speed * 272.)/240.)-136.;  // 237.4 - Total angle between 0 - 100 //
+    self.angle = ((speed * 272.)/maxValue)-136.;  // 237.4 - Total angle between 0 - 100 //
 
     
     if(self.angle<=-136.)

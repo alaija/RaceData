@@ -11,6 +11,7 @@
 #import "RDRaceInfoInteractorInput.h"
 #import "LocationService.h"
 #import "MotionService.h"
+#import "SettingsService.h"
 
 @protocol RDRaceInfoInteractorOutput;
 
@@ -18,6 +19,7 @@
 
 @property (nonatomic, strong) NSObject<LocationService> *locationService;
 @property (nonatomic, strong) NSObject<MotionService> *motionService;
+@property (nonatomic, strong) id<SettingsService> settingsService;
 
 @property (nonatomic, weak) id<RDRaceInfoInteractorOutput> output;
 

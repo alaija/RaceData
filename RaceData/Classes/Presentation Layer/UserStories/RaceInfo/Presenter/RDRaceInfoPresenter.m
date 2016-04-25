@@ -11,6 +11,7 @@
 #import "RDRaceInfoViewInput.h"
 #import "RDRaceInfoInteractorInput.h"
 #import "RDRaceInfoRouterInput.h"
+#import "RDSettingsObject.h"
 
 @implementation RDRaceInfoPresenter
 
@@ -25,6 +26,12 @@
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
     [self.interactor setupManagers];
+}
+
+- (void)updateSettings:(RDSettingsObject *)settings
+{
+    [self.view setMetricSystem:settings.metric];
+    [self.view setNightMode:settings.nightMode];
 }
 
 - (void)didTriggerRaceStartEvent

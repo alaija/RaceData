@@ -6,11 +6,13 @@
 //  Copyright 2016 RaceData. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+@class RDSettingsObject;
 
 @protocol RDSpeedometerInteractorOutput <NSObject>
 
 - (void)speedChanged:(CGFloat)speed;
+- (void)updateSettings:(RDSettingsObject *)settings;
 
 @end

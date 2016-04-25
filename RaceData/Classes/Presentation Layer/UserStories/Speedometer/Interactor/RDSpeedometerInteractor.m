@@ -7,7 +7,6 @@
 //
 
 #import "RDSpeedometerInteractor.h"
-
 #import "RDSpeedometerInteractorOutput.h"
 
 static void *SpeedometerLocationServiceContext = &SpeedometerLocationServiceContext;
@@ -43,6 +42,20 @@ static void *SpeedometerLocationServiceContext = &SpeedometerLocationServiceCont
                               context:SpeedometerLocationServiceContext];
     
     [self.locationService requestAccess];
+    
+    [self updateSettings];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateSettings)
+                                                 name:RDSettingsDidUpdate
+                                               object:nil];
+}
+
+- (void)updateSettings
+{
+    self.locationService.metric = self.settingsService.settings.metric;
+    
+    [self.output updateSettings:self.settingsService.settings];
 }
 
 - (void)startUpdates

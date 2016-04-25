@@ -37,6 +37,8 @@
                                                     with:[self.serviceComponents locationService]];
                               [definition injectProperty:@selector(motionService)
                                                     with:[self.serviceComponents motionService]];
+                              [definition injectProperty:@selector(settingsService)
+                                                    with:[self.serviceComponents settingsService]];
                           }];
 }
 

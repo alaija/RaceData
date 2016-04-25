@@ -21,6 +21,4 @@
 @property (nonatomic, strong) id<RDSpeedometerInteractorInput> interactor;
 @property (nonatomic, strong) id<RDSpeedometerRouterInput> router;
 
-@property (nonatomic, strong) id<SettingsService> settingsService;
-
 @end

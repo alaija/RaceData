@@ -35,7 +35,7 @@
     [self addSubview:self.canvasView];
     
     self.speedLabel = [UILabel new];
-    self.speedLabel.font = [UIFont fontWithName:@"MyriadPro-Cond" size:[self fontSize]];
+    self.speedLabel.font = [UIFont fontWithName:@"MyriadPro-Bold" size:[self fontSize]];
     self.speedLabel.textColor = [UIColor blackColor];
     
     [self addSubview:self.speedLabel];
@@ -59,7 +59,7 @@
     if ([UIScreen is35inch]) {
         return 105.;
     } else if ([UIScreen is4inch]) {
-        return 115.;
+        return 110.;
     } else if ([UIScreen is47inch]) {
         return 135.;
     }
@@ -72,7 +72,7 @@
     if ([UIScreen is35inch]) {
         return 70.;
     } else if ([UIScreen is4inch]) {
-        return 80.;
+        return 75.;
     } else if ([UIScreen is47inch]) {
         return 90.;
     }
@@ -83,14 +83,14 @@
 - (CGFloat)fontSize
 {
     if ([UIScreen is35inch]) {
-        return 42.;
+        return 32.;
     } else if ([UIScreen is4inch]) {
-        return 44.;
+        return 36.;
     } else if ([UIScreen is47inch]) {
-        return 56.;
+        return 40.;
     }
     
-    return 60.;
+    return 46.;
 }
 
 @end

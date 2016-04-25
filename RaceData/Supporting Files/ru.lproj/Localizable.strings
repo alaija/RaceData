@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  RaceData
+
+  Created by Alan Kochev on 18/04/16.
+  Copyright © 2016 Pavel Panchenko. All rights reserved.
+*/
+
+"KMPH" = "км/ч";
+"MPH" = "миля/ч";

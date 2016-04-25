@@ -36,4 +36,17 @@
     return MAX([self mainScreen].bounds.size.height, [self mainScreen].bounds.size.width);
 }
 
++ (CGFloat)navigationButtonWidth
+{
+    if ([UIScreen is35inch]) {
+        return 60.;
+    } else if ([UIScreen is4inch]) {
+        return 60.;
+    } else if ([UIScreen is47inch]) {
+        return 65.;
+    }
+    
+    return 75.;
+}
+
 @end

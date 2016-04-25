@@ -12,5 +12,6 @@
 
 @property (nonatomic) CGFloat speed;
 @property (nonatomic) BOOL overSpeedLimit;
+@property (nonatomic) BOOL metric;
 
 @end

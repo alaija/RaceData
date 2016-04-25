@@ -27,10 +27,14 @@
 @property (nonatomic) BOOL shouldUpdateTime;
 
 @property (nonatomic) NSDate *startTime;
+@property (nonatomic) NSString *speedFormat;
 
 @end
 
 @implementation RDRaceInfoViewController
+
+@synthesize nightMode = _nightMode;
+@synthesize metricSystem = _metricSystem;
 
 #pragma mark - Internal
 
@@ -115,6 +119,19 @@
     self.speed100Label.textColor = [UIColor whiteColor];
 }
 
+- (void)setMetricSystem:(BOOL)metricSystem
+{
+    _metricSystem = metricSystem;
+    [self updateFormat];
+}
+
+- (void)updateFormat
+{
+    _speedFormat = [NSString stringWithFormat:@"%%.1f %@", (_metricSystem
+                                                            ?  NSLocalizedString(@"KMPH", nil)
+                                                            : NSLocalizedString(@"MPH", nil))];
+}
+
 - (void)setupReadyToStartState
 {
     self.speedTimeLabel.text = @"";
@@ -139,7 +156,7 @@
 
 - (void)setupRaceState
 {
-    self.speedLabel.text = @"0.0 km/h";
+    self.speedLabel.text = [NSString stringWithFormat:_speedFormat, 0.];
 }
 
 - (void)updateSpeed:(CGFloat)speed
@@ -159,7 +176,7 @@
             }
         }
         
-        self.speedLabel.text = [NSString stringWithFormat:@"%.1f km/h", speed];
+        self.speedLabel.text = [NSString stringWithFormat:_speedFormat, speed];
     }
 }
 

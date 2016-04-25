@@ -11,6 +11,7 @@
 #import "RDRootViewOutput.h"
 #import "RDRootContent.h"
 #import "PureLayout.h"
+#import "UIScreen+RDScreen.h"
 
 @interface RDRootViewController()
 
@@ -18,22 +19,52 @@
 @property (nonatomic, strong) UIViewController *currentContentViewController;
 @property (nonatomic, strong) UIViewController *gpsViewController;
 @property (nonatomic, strong) UIButton *hudButton;
+@property (weak, nonatomic) IBOutlet UIImageView *glowPanelView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *navigationButtonWidthConstraint;
+
 @end
 
 @implementation RDRootViewController
 
 - (void)toogleHudded
 {
-    if (_hudded) {
-        self.contentContainerView.transform = CGAffineTransformMakeScale(1., 1.);
-    } else {
-        self.contentContainerView.transform = CGAffineTransformMakeScale(1., -1.);
-    }
+    self.contentContainerView.transform = CGAffineTransformMakeScale(1., _hudded ? 1. : -1);
     
     _hudded = !_hudded;
+    
     [UIViewController attemptRotationToDeviceOrientation];
     
+    [self updateGlowPanelWithOrientation:UIInterfaceOrientationUnknown withDuration:0];
+    
     [self.analyticsService trackEventWithCategory:ANALYTICS_CATEGORY_UI_ACTIONS action:@"hudChanged" label:_hudded ? @"YES" : @"NO"];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    [self updateGlowPanelWithOrientation:toInterfaceOrientation withDuration:duration];
+}
+
+- (void)updateGlowPanelWithOrientation:(UIInterfaceOrientation)interfaceOrientation withDuration:(NSTimeInterval)duration
+{
+    if (interfaceOrientation == UIInterfaceOrientationUnknown) {
+        interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    }
+    
+    BOOL isLandscape = UIInterfaceOrientationIsLandscape(interfaceOrientation) || _hudded;
+    
+    _glowPanelView.hidden = isLandscape;
+    [UIView animateWithDuration:duration + 0.1
+                          delay:duration
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         _glowPanelView.alpha = isLandscape ? 0. : 1.;
+                     } completion:^(BOOL finished) {
+                         if (finished) {
+                             _glowPanelView.hidden = isLandscape;
+                         }
+                     }];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
@@ -69,7 +100,11 @@
                                               ? @"race"
                                               : @"speedometer")]
                 forState:UIControlStateNormal];
-        
+        [button setImage:[UIImage imageNamed:([identifier
+                                               isEqualToString:@"Speedometer"]
+                                              ? @"race_highlighted"
+                                              : @"speedometer_highlighted")]
+                forState:UIControlStateHighlighted];
         [button removeTarget:nil action:NULL
             forControlEvents:UIControlEventAllEvents];
         
@@ -119,18 +154,20 @@
 
 - (void)viewDidLoad
 {
-	[super viewDidLoad];
-
-	[self.output didTriggerViewReadyEvent];
+    [super viewDidLoad];
+    
+    [self.output didTriggerViewReadyEvent];
 }
 
 #pragma mark - Методы RDRootViewInput
 
 - (void)setupInitialState
 {
-	// В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
-    [self.leftNavigationButton setContentMode:UIViewContentModeScaleAspectFit];
-}
+    // В этом методе происходит настройка параметров view, зависящих от ее жизненого цикла (создание элементов, анимации и пр.)
+    [self.leftNavigationButton.imageView
+     setContentMode:UIViewContentModeScaleAspectFit];
+    _navigationButtonWidthConstraint.constant = [UIScreen navigationButtonWidth];
+    [self updateGlowPanelWithOrientation:UIInterfaceOrientationUnknown withDuration:0];}
 
 #pragma mark - Методы RDRootCOntentEmbeder
 
@@ -152,9 +189,9 @@
     self.currentContentViewController = controller;
     [controller.view autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     
-
+    
     [self configureAsNavigationButton:self.leftNavigationButton withIdentifier:controller.restorationIdentifier];
-
+    
     self.rightNavigationButton.hidden = YES;
     
     if ([content respondsToSelector:@selector(leftActionButton)]) {
